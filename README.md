@@ -1,10 +1,34 @@
-# Getting Started with Create React App
+# Welcome !
+I outlined some basic instructions for you guys but hit me up if you have any questions..
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Wireframe: 
+Here is the wireframe website along with the credentials to get you access..
+whimsical.com
+email: kristineceecee@gmail.com
+password: ChrisSucks420
 
-## Available Scripts
+# Workflow process:
+I want to simulate the actual workflow of a dev team so try to follow this process for making changes and pushing code to production..
 
-In the project directory, you can run:
+We will be working off the master branch for development and the main branch will be production
+DO NOT push changes to the main branch
+Whenever you want to start a new pull request, start on the master branch and make a new branch..
+
+git branch (checks which current branch you're on)
+git checkout master (git checkout moves you into a branch)
+git branch new-branch (adding a name after git branch CREATES the branch)
+git checkout new-branch (move into the new branch)
+
+Once you have created some changes, add them to your current branch, commit, then push the changes..
+
+git add . (adds all new code)
+git commit -m 'First Commit' (commits the changes with a comment of your choice, comment in the quotes)
+git push origin new-branch (pushes the changes to the name of the branch you're currently on, please specify the branch name)
+
+I would recommend making frequent commits/pushes to your branch so that you don't accidentally lose code due or if you want to revert changes back to a specific branch you can easily do that
+
+Once you have comfortable with all the changes to your current branch its time to make a Pull Request on Github..
+I will review your PR and when it is approved you can merge those changes to the master branch 
 
 ### `npm start`
 
@@ -14,57 +38,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+### Recommended VSCode Extensions
+This is what i'm using for VSCode Extensions if you're interested, i'd suggest getting Prettier for sure for formatting..
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Prettier 
+Auto Close Tag
+Auto Rename Tag
+Code Spell Checker
+Live Server 
