@@ -35,6 +35,12 @@ I would recommend making frequent commits/pushes to your branch so that you don'
 Once you have comfortable with all the changes to your current branch its time to make a Pull Request on Github..
 I will review your PR and when it is approved you can merge those changes to the master branch 
 
+### Dependencies
+- install semantic ui:
+```
+npm install semantic-ui-react semantic-ui-css
+```
+
 ### `npm start`
 
 Runs the app in the development mode.\
