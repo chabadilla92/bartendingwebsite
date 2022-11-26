@@ -40,6 +40,14 @@ I will review your PR and when it is approved you can merge those changes to the
 ```
 npm install semantic-ui-react semantic-ui-css
 ```
+- install react-router:
+```
+npm install --save react-router-dom
+```
+- install styled-components:
+```
+npm install --save styled-components
+```
 
 ### `npm start`
 
