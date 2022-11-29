@@ -1,3 +1,12 @@
-.logo.i.beer.icon{
-    size: 1000px;
+*{
+    background-color: aliceblue;
+}
+
+.ui.tabular.menu .ui.menu:not(.vertical) .right.item, .ui.menu:not(.vertical) .right.menu{
+    justify-content: space-around;
+    align-items: end;
+}
+
+.ui.container .ui.menu:first-child{
+    margin-top: 10px;
 }

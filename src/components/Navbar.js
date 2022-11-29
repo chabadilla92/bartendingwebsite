@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Container, Menu, Header, Icon } from "semantic-ui-react";
 
+import "../css/navBar.css"
+
 class Navbar extends Component {
   state = {};
 
@@ -12,11 +14,10 @@ class Navbar extends Component {
 
     return (
       <Container>
-        <Header as="h1">
-          <Icon circular name="beer"/>
-        </Header>
-
         <Menu tabular>
+          <Header as="h1">
+            <Icon circular name="beer" />
+          </Header>
           <Menu.Menu position="right">
             <Link to="/">
               <Menu.Item
