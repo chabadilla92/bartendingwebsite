@@ -76,7 +76,7 @@ class Navbar extends Component {
           </Menu.Menu>
         </Menu>
       </Container>
-        <Jumbotron jumbotronData={this.props.jumbotronData} />
+        <Jumbotron />
       </div>
     );
   }
