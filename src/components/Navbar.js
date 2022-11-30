@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import { Container, Menu, Header, Icon } from "semantic-ui-react";
 
 import "../css/navBar.css"
+import Jumbotron from "./Jumbotron";
 
 class Navbar extends Component {
+
   state = {};
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
@@ -13,6 +15,8 @@ class Navbar extends Component {
     const { activeItem } = this.state;
 
     return (
+      <div>
+
       <Container>
         <Menu tabular>
           <Header as="h1">
@@ -72,6 +76,8 @@ class Navbar extends Component {
           </Menu.Menu>
         </Menu>
       </Container>
+        <Jumbotron jumbotronData={this.props.jumbotronData} />
+      </div>
     );
   }
 }
