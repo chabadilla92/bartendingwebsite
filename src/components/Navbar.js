@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Container, Menu, Header, Icon } from "semantic-ui-react";
 
+import "../css/navBar.css"
+import Jumbotron from "./Jumbotron";
+
 class Navbar extends Component {
+
   state = {};
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
@@ -11,12 +15,13 @@ class Navbar extends Component {
     const { activeItem } = this.state;
 
     return (
-      <Container>
-        <Header as="h1">
-          <Icon circular name="beer"/>
-        </Header>
+      <div>
 
+      <Container>
         <Menu tabular>
+          <Header as="h1">
+            <Icon circular name="beer" />
+          </Header>
           <Menu.Menu position="right">
             <Link to="/">
               <Menu.Item
@@ -71,6 +76,8 @@ class Navbar extends Component {
           </Menu.Menu>
         </Menu>
       </Container>
+        <Jumbotron />
+      </div>
     );
   }
 }

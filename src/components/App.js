@@ -10,18 +10,16 @@ import Home from "../pages/Home";
 
 const App = () => {
   return (
-    
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" exact element={<Home/>} />
-          <Route path="/contact" exact element={<Contact/>} />
-          <Route path="/questions" exact element={<Questions/>} />
-          <Route path="/services" exact element={<Services/>} />
-          <Route path="/booking" exact element={<BookNow/>} />
-        </Routes>
-      </BrowserRouter>
- 
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/contact" exact element={<Contact />} />
+        <Route path="/questions" exact element={<Questions />} />
+        <Route path="/services" exact element={<Services />} />
+        <Route path="/booking" exact element={<BookNow />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
