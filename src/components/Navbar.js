@@ -14,8 +14,8 @@ class Navbar extends Component {
     const { activeItem } = this.state;
 
     return (
-      <div>
-        <Container>
+      <div className="navbar">
+
           <Menu tabular>
             <Header as="h1">
               <Icon circular name="beer" />
@@ -73,7 +73,7 @@ class Navbar extends Component {
               </Link>
             </Menu.Menu>
           </Menu>
-        </Container>
+
         <Jumbotron />
       </div>
     );

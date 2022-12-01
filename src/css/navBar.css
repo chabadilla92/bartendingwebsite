@@ -1,6 +1,9 @@
-*{
+
+.navbar .ui.tabular.menu{
+    padding-top: 15px ;
     background-color: aliceblue;
 }
+
 
 .ui.tabular.menu .ui.menu:not(.vertical) .right.item, .ui.menu:not(.vertical) .right.menu{
     justify-content: space-around;
