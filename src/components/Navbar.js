@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Container, Menu, Header, Icon } from "semantic-ui-react";
+import { Menu, Header, Icon } from "semantic-ui-react";
 
 import "../css/navBar.css";
 import Jumbotron from "./Jumbotron";
