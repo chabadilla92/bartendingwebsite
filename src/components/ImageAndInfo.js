@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Image, Grid } from "semantic-ui-react";
+import { Image, Grid, Divider } from "semantic-ui-react";
 
 const Wrapper = styled.div`
   margin: 55px;
@@ -34,6 +34,7 @@ const ImageAndInfo = ({ image, title, description }) => {
           <Description>{description}</Description>
         </Grid.Column>
       </Grid>
+      <Divider />
     </Wrapper>
   );
 };
