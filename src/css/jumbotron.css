@@ -1,15 +1,15 @@
 .jumbotron{
+    margin-top: 10px;
     position: relative;
     display: flex;
 }
 
 .jumbotron .ui.fluid.image img{
     display: flex;
-
     object-fit: cover;
     height: 50vh;
     width: 100%;
-    position: absolute;
+    position: relative;
 }
 
 .title{
