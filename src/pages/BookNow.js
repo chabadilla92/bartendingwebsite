@@ -1,8 +1,14 @@
 import React from 'react'
+import PageHeader from '../components/PageHeader'
+
+const header = {
+  title: "plan your next event",
+  subheader: null
+}
 
 const BookNow = () => {
   return (
-    <div></div>
+    <PageHeader header={header} />
   )
 }
 
