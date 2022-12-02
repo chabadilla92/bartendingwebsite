@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Menu, Header, Icon } from "semantic-ui-react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -11,18 +11,26 @@ import Questions from "../pages/Questions";
 import Services from "../pages/Services";
 import Home from "../pages/Home";
 
-//TODO: figure out why tabs aren't highlighting
 //TODO: pass the activeItem state to ButtonSection and have it update the state in App.js with whatever path it navigates to.
 
-const App = () => {
-  const [activeItem, setActiveItem] = useState("")
+class App extends Component {
   
-  const handleItemClick = (e, name) => {
-    setActiveItem({activeItem: name });
-  }
+  state = {};
+  
+  handleItemClick = (e, { name }) => {
+    this.setState({ activeItem: name })
+    // console.log(this.state.activeItem, name)
+  };
 
-  return (
+  
+  render() {
+    const { activeItem } = this.state;
+    
+    // console.log(activeItem.activeItem.target.innerText)
+    
+    return (
     <BrowserRouter>
+
       <div className="navbar">
         <Menu tabular>
           <Header as="h1">
@@ -33,7 +41,7 @@ const App = () => {
               <Menu.Item
                 name="home"
                 active={activeItem === "home"}
-                onClick={handleItemClick}
+                onClick={this.handleItemClick}
                 className="item"
               >
                 home
@@ -44,7 +52,8 @@ const App = () => {
               <Menu.Item
                 name="contact"
                 active={activeItem === "contact"}
-                onClick={handleItemClick}
+                onClick={this.handleItemClick}
+                className="item"
               >
                 contact
               </Menu.Item>
@@ -54,7 +63,8 @@ const App = () => {
               <Menu.Item
                 name="services"
                 active={activeItem === "services"}
-                onClick={handleItemClick}
+                onClick={this.handleItemClick}
+                className="item"
               >
                 services
               </Menu.Item>
@@ -64,7 +74,8 @@ const App = () => {
               <Menu.Item
                 name="book now"
                 active={activeItem === "book now"}
-                onClick={handleItemClick}
+                onClick={this.handleItemClick}
+                className="item"
               >
                 book now
               </Menu.Item>
@@ -74,7 +85,8 @@ const App = () => {
               <Menu.Item
                 name="faq"
                 active={activeItem === "faq"}
-                onClick={handleItemClick}
+                onClick={this.handleItemClick}
+                className="item"
               >
                 faq
               </Menu.Item>
@@ -86,7 +98,7 @@ const App = () => {
       </div>
 
       <Routes>
-        <Route path="/" exact element={<Home page={activeItem} />} />
+        <Route path="/" exact element={<Home />} />
         <Route path="/contact" exact element={<Contact />} />
         <Route path="/questions" exact element={<Questions />} />
         <Route path="/services" exact element={<Services />} />
@@ -94,6 +106,7 @@ const App = () => {
       </Routes>
     </BrowserRouter>
   );
+  }
 };
 
 export default App;
