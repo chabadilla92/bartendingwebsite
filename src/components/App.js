@@ -26,8 +26,6 @@ class App extends Component {
   render() {
     const { activeItem } = this.state;
     
-    // console.log(activeItem.activeItem.target.innerText)
-    
     return (
     <BrowserRouter>
 
@@ -98,7 +96,7 @@ class App extends Component {
       </div>
 
       <Routes>
-        <Route path="/" exact element={<Home />} />
+        <Route path="/" exact element={<Home handlePageSelect={this.handleItemClick} />} />
         <Route path="/contact" exact element={<Contact />} />
         <Route path="/questions" exact element={<Questions />} />
         <Route path="/services" exact element={<Services />} />
