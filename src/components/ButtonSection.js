@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   margin-top: 50px;
 `;
 
+
 const ButtonSection = ({ header, buttonText, path, handleJumboSelect }) => {
   const [activeItem, setActiveItem] = useState("")
 
@@ -27,6 +28,7 @@ const ButtonSection = ({ header, buttonText, path, handleJumboSelect }) => {
              name={path}
              active={activeItem === {path}}
              onClick={handleJumboImage}
+             style={{marginBottom: "15px"}}
              >{buttonText}</Button>
           </Link>
         </Header>
