@@ -7,6 +7,7 @@ import { Divider } from "semantic-ui-react";
 
 import home from "../images/home.avif";
 
+
 const headerProps = {
   title: "Just Chill'd",
   subheader: "bartending website testing subheader",
