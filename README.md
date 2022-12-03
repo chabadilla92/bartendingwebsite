@@ -48,6 +48,10 @@ npm install --save react-router-dom
 ```
 npm install --save styled-components
 ```
+- install react-icons: 
+```
+npm install react-icons --save
+```
 
 ### `npm start`
 
