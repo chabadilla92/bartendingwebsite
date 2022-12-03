@@ -1,9 +1,11 @@
 import React from "react";
 import PageHeader from "../components/PageHeader";
-import home from "../images/home.avif";
 import ImageAndInfo from "../components/ImageAndInfo";
 import ButtonSection from "../components/ButtonSection";
+import ImageGroup from "../components/ImageGroup";
 import { Divider } from "semantic-ui-react";
+
+import home from "../images/home.avif";
 
 const headerProps = {
   title: "Just Chill'd",
@@ -38,6 +40,7 @@ const Home = ({ handleJumboSelect }) => {
         header={buttonProps.header}
         path={buttonProps.path}
       />
+      <ImageGroup />
     </div>
   );
 };
