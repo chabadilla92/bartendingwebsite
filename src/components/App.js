@@ -11,7 +11,6 @@ import Questions from "../pages/Questions";
 import Services from "../pages/Services";
 import Home from "../pages/Home";
 
-//TODO: pass the activeItem state to ButtonSection and have it update the state in App.js with whatever path it navigates to.
 
 class App extends Component {
   
@@ -19,10 +18,8 @@ class App extends Component {
   
   handleItemClick = (e, { name }) => {
     this.setState({ activeItem: name })
-    // console.log(this.state.activeItem, name)
   };
 
-  
   render() {
     const { activeItem } = this.state;
     
@@ -96,7 +93,7 @@ class App extends Component {
       </div>
 
       <Routes>
-        <Route path="/" exact element={<Home handlePageSelect={this.handleItemClick} />} />
+        <Route path="/" exact element={<Home handleJumboSelect={this.handleItemClick} />} />
         <Route path="/contact" exact element={<Contact />} />
         <Route path="/questions" exact element={<Questions />} />
         <Route path="/services" exact element={<Services />} />

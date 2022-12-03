@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { Button, Header, Container } from "semantic-ui-react";
 import { Link } from "react-router-dom";
@@ -6,10 +7,13 @@ const Wrapper = styled.div`
   margin-top: 50px;
 `;
 
-const ButtonSection = ({ header, buttonText, path, handlePageSelect }) => {
+const ButtonSection = ({ header, buttonText, path, handleJumboSelect }) => {
+  const [activeItem, setActiveItem] = useState("")
 
-  const handlePageNavigate = (e, name) => {
-    handlePageSelect(e, name)
+  const handleJumboImage = (e, {name}) => {
+    handleJumboSelect(e, name)
+    setActiveItem({name})
+    console.log(name)
   }
 
   return (
@@ -20,7 +24,9 @@ const ButtonSection = ({ header, buttonText, path, handlePageSelect }) => {
           <Link to={path}>
             <Button
              primary
-             onClick={handlePageNavigate}
+             name={path}
+             active={activeItem === {path}}
+             onClick={handleJumboImage}
              >{buttonText}</Button>
           </Link>
         </Header>
