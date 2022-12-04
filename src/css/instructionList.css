@@ -1,0 +1,24 @@
+.wrapper {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ui.container#instruction {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper .ui.center.aligned.header {
+    display: flex;
+    justify-content: center;
+}
+
+
+.ui.header>.icon+.content{
+    display: flex;
+    align-items: center;
+    padding: 1.75rem;
+    font-weight: 400;
+}
