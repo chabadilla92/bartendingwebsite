@@ -2,8 +2,13 @@ import React from "react";
 import InstructionList from "../components/InstructionList";
 import PageHeader from "../components/PageHeader";
 
-const headerProps = {
+const firstHeaderProps = {
   title: "how this works",
+  subheader: "",
+};
+
+const secondHeaderProps = {
+  title: "catering packages",
   subheader: "",
 };
 
@@ -28,8 +33,9 @@ const instructionListProps =[
 const Services = () => {
   return (
     <div>
-      <PageHeader header={headerProps} />
+      <PageHeader header={firstHeaderProps} />
       <InstructionList instructions={instructionListProps} />
+      <PageHeader header={secondHeaderProps} />
     </div>
   );
 };
