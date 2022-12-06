@@ -43,16 +43,6 @@ class App extends Component {
               </Menu.Item>
             </Link>
 
-            <Link to="/contact">
-              <Menu.Item
-                name="contact"
-                active={activeItem === "contact"}
-                onClick={this.handleItemClick}
-                className="item"
-              >
-                contact
-              </Menu.Item>
-            </Link>
 
             <Link to="/services">
               <Menu.Item
@@ -86,6 +76,18 @@ class App extends Component {
                 faq
               </Menu.Item>
             </Link>
+
+            <Link to="/contact">
+              <Menu.Item
+                name="contact"
+                active={activeItem === "contact"}
+                onClick={this.handleItemClick}
+                className="item"
+              >
+                contact
+              </Menu.Item>
+            </Link>
+            
           </Menu.Menu>
         </Menu>
 
