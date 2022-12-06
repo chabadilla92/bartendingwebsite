@@ -1,14 +1,43 @@
-import React from 'react'
-import PageHeader from '../components/PageHeader'
+import React from "react";
+import InstructionList from "../components/InstructionList";
+import PageHeader from "../components/PageHeader";
 
-const header = {
+const firstHeaderProps = {
   title: "how this works",
-  subheader: "bartending website testing subheader"
-}
+  subheader: "",
+};
+
+const secondHeaderProps = {
+  title: "catering packages",
+  subheader: "",
+};
+
+const instructionListProps =[
+  {
+    header: "pick your catering package",
+    number: "1",
+    id: 1
+  },
+  {
+    header: "select your drinks",
+    number: "2",
+    id: 2
+  },
+  {
+    header: "service and equipment",
+    number: "3",
+    id: 3
+  },
+]
+
 const Services = () => {
   return (
-    <PageHeader header={header} />
-  )
-}
+    <div>
+      <PageHeader header={firstHeaderProps} />
+      <InstructionList instructions={instructionListProps} />
+      <PageHeader header={secondHeaderProps} />
+    </div>
+  );
+};
 
-export default Services
+export default Services;
