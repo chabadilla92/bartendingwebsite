@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Container, Menu, Header, Icon } from "semantic-ui-react";
+import { Menu, Header, Icon } from "semantic-ui-react";
 
 import "../css/navBar.css";
 import Jumbotron from "./Jumbotron";
@@ -14,8 +14,8 @@ class Navbar extends Component {
     const { activeItem } = this.state;
 
     return (
-      <div>
-        <Container>
+      <div className="navbar">
+
           <Menu tabular>
             <Header as="h1">
               <Icon circular name="beer" />
@@ -73,7 +73,7 @@ class Navbar extends Component {
               </Link>
             </Menu.Menu>
           </Menu>
-        </Container>
+
         <Jumbotron />
       </div>
     );

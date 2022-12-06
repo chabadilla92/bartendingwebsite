@@ -40,7 +40,7 @@ const Jumbotron = () => {
       {jumbotronData.map((data) => {
         if (data.id === window.location.pathname) {
           return (
-            <div className="jumbotron">
+            <div className="jumbotron" key={data.id}>
               <div className="title">{data.title}</div>
               <div className="ui fluid image">{data.img}</div>
             </div>
