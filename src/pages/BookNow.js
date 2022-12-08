@@ -1,4 +1,5 @@
 import React from 'react'
+import Jumbotron from '../components/Jumbotron'
 import PageHeader from '../components/PageHeader'
 
 const header = {
@@ -8,7 +9,10 @@ const header = {
 
 const BookNow = () => {
   return (
-    <PageHeader header={header} />
+    <div>
+      <Jumbotron />
+      <PageHeader header={header} />
+    </div>
   )
 }
 

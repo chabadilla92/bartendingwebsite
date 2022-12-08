@@ -1,4 +1,3 @@
-import React from "react";
 import "../css/jumbotron.css";
 import booking from "../images/booking.avif";
 import contact from "../images/contact.avif";
@@ -8,39 +7,40 @@ import services from "../images/services.avif";
 
 const jumbotronData = [
   {
-    id: "/",
+    path: "/",
     title: "welcome",
     img: <img src={home} alt="" />,
   },
   {
-    id: "/booking",
+    path: "/booking",
     title: "book now",
     img: <img src={booking} alt="" />,
   },
   {
-    id: "/contact",
+    path: "/contact",
     title: "contact us",
     img: <img src={contact} alt="" />,
   },
   {
-    id: "/questions",
+    path: "/questions",
     title: "faq",
     img: <img src={faq} alt="" />,
   },
   {
-    id: "/services",
+    path: "/services",
     title: "services",
     img: <img src={services} alt="" />,
   },
 ];
 
 const Jumbotron = () => {
+
   return (
     <div>
       {jumbotronData.map((data) => {
-        if (data.id === window.location.pathname) {
+        if (data.path === window.location.pathname) {
           return (
-            <div className="jumbotron" key={data.id}>
+            <div className="jumbotron" key={data.path}>
               <div className="title">{data.title}</div>
               <div className="ui fluid image">{data.img}</div>
             </div>

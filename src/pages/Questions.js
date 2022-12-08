@@ -1,14 +1,18 @@
-import React from 'react'
-import PageHeader from '../components/PageHeader'
+import React from "react";
+import Jumbotron from "../components/Jumbotron";
+import PageHeader from "../components/PageHeader";
 
 const header = {
   title: "frequently asked questions",
-  subheader: null
-}
+  subheader: null,
+};
 const Questions = () => {
   return (
-    <PageHeader header={header} />
-  )
-}
+    <div>
+      <Jumbotron />
+      <PageHeader header={header} />
+    </div>
+  );
+};
 
-export default Questions
+export default Questions;

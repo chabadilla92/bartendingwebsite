@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Menu, Header, Icon } from "semantic-ui-react";
 
 import "../css/navBar.css";
-import Jumbotron from "./Jumbotron";
 
 class Navbar extends Component {
   state = {};
@@ -73,8 +72,6 @@ class Navbar extends Component {
               </Link>
             </Menu.Menu>
           </Menu>
-
-        <Jumbotron />
       </div>
     );
   }

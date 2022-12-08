@@ -1,5 +1,6 @@
 import React from "react";
 import InstructionList from "../components/InstructionList";
+import Jumbotron from "../components/Jumbotron";
 import PageHeader from "../components/PageHeader";
 
 const firstHeaderProps = {
@@ -33,6 +34,7 @@ const instructionListProps =[
 const Services = () => {
   return (
     <div>
+      <Jumbotron />
       <PageHeader header={firstHeaderProps} />
       <InstructionList instructions={instructionListProps} />
       <PageHeader header={secondHeaderProps} />
