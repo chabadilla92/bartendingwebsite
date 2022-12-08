@@ -12,10 +12,10 @@ const ButtonSection = ({ header, buttonText, path, handleJumboSelect }) => {
   const [activeItem, setActiveItem] = useState("")
 
   const handleJumboImage = (e, {name}) => {
-    handleJumboSelect(e, name)
     setActiveItem({name})
-    console.log(name)
+    handleJumboSelect(activeItem, name)
   }
+
 
   return (
     <Wrapper>

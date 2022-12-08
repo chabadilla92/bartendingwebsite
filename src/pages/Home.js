@@ -6,6 +6,7 @@ import ImageGroup from "../components/ImageGroup";
 import { Divider } from "semantic-ui-react";
 
 import home from "../images/home.avif";
+import Jumbotron from "../components/Jumbotron";
 
 
 const headerProps = {
@@ -28,6 +29,7 @@ const infoProps = {
 const Home = ({ handleJumboSelect }) => {
   return (
     <div className="home">
+      <Jumbotron />
       <PageHeader header={headerProps} />
       <ImageAndInfo
         image={home}

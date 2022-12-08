@@ -1,14 +1,18 @@
-import React from 'react'
-import PageHeader from '../components/PageHeader'
+import React from "react";
+import Jumbotron from "../components/Jumbotron";
+import PageHeader from "../components/PageHeader";
 
 const header = {
   title: "send us an email!",
-  subheader: "we'd love to hear from you"
-}
+  subheader: "we'd love to hear from you",
+};
 const Contact = () => {
   return (
-    <PageHeader header={header} />
-  )
-}
+    <div>
+      <Jumbotron />
+      <PageHeader header={header} />
+    </div>
+  );
+};
 
-export default Contact
+export default Contact;
