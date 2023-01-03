@@ -9,7 +9,7 @@ const firstHeaderProps = {
 };
 
 const secondHeaderProps = {
-  title: "catering packages",
+  title: "tell us about your event",
   subheader: "",
 };
 
