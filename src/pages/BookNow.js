@@ -15,17 +15,17 @@ const secondHeaderProps = {
 
 const instructionListProps =[
   {
-    header: "pick your catering package",
+    header: "give us the details of your event",
     number: "1",
     id: 1
   },
   {
-    header: "select your drinks",
+    header: "tell us what the vibe is",
     number: "2",
     id: 2
   },
   {
-    header: "service and equipment",
+    header: "we'll reach out and confirm!",
     number: "3",
     id: 3
   },
