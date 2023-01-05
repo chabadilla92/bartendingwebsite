@@ -40,11 +40,6 @@ I will review your PR and when it is approved you can merge those changes to the
 ```
 npm install semantic-ui-react semantic-ui-css
 ```
-- install react-carousel:
-```
-npm i -S pure-react-carousel
-
-```
 - install react-router:
 ```
 npm install --save react-router-dom
