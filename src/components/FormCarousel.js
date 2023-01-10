@@ -2,8 +2,8 @@ import React from "react";
 import { Segment } from "semantic-ui-react";
 import Carousel from "./Carousel";
 import EventDetailsForm from "./EventDetailsForm";
-import PersonInfoForm from "./PersonInfoForm";
 import VenueDetailsForm from "./VenueDetailsForm";
+import PersonalDetailsForm from "./PersonalDetailsForm";
 
 
 //TODO: initialize the states of all of the information that we need for this form
@@ -16,11 +16,11 @@ import VenueDetailsForm from "./VenueDetailsForm";
 
 export const FormCarousel = () => {
   return (
-    <Segment style={{ border: "none", margin: '55px'}}>
+    <Segment style={{ margin: '55px'}}>
       <Carousel>
-        <EventDetailsForm label={"first"}/>
-        <PersonInfoForm label={"second"}/>
-        <VenueDetailsForm label={"third"}/>
+        <EventDetailsForm />
+        <VenueDetailsForm />
+        <PersonalDetailsForm />
       </Carousel>
     </Segment>
   );
