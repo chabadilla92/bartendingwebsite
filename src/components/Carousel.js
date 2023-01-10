@@ -43,14 +43,19 @@ const Carousel = ({ children }) => {
         >
           back
         </Button>
-        <Button
-          primary
-          onClick={() => {
-            updateIndex(activeIndex + 1);
-          }}
-        >
-          next
-        </Button>
+
+        {activeIndex !== 2 ? (
+          <Button
+            primary
+            onClick={() => {
+              updateIndex(activeIndex + 1);
+            }}
+          >
+            next
+          </Button>
+        ) : (
+          <Button>submit</Button>
+        )}
       </div>
     </div>
   );
