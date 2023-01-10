@@ -1,9 +1,9 @@
 import React from "react";
 import { Segment } from "semantic-ui-react";
 import Carousel from "./Carousel";
-import EventDetailsForm from "./EventDetailsForm";
-import VenueDetailsForm from "./VenueDetailsForm";
-import PersonalDetailsForm from "./PersonalDetailsForm";
+import EventDetailsForm from "./Forms/EventDetailsForm";
+import VenueDetailsForm from "./Forms/VenueDetailsForm";
+import PersonalDetailsForm from "./Forms/PersonalDetailsForm";
 
 
 //TODO: initialize the states of all of the information that we need for this form
