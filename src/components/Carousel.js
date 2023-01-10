@@ -34,6 +34,7 @@ const Carousel = ({ children }) => {
           return React.cloneElement(child, { width: "100%" });
         })}
       </div>
+
       <div className="indicators">
         <Button
           primary

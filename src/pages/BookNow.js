@@ -1,4 +1,7 @@
 import React from "react";
+import { FcTodoList, FcFeedback, FcFlashOn  } from "react-icons/fc";
+import {  } from "react-icons/gi";
+
 
 import { FormCarousel } from "../components/FormCarousel";
 import InstructionList from "../components/InstructionList";
@@ -18,17 +21,17 @@ const secondHeaderProps = {
 const instructionListProps = [
   {
     header: "give us the details of your event",
-    number: "1",
+    number: <FcTodoList />,
     id: 1,
   },
   {
     header: "tell us what the vibe is",
-    number: "2",
+    number: <FcFlashOn />,
     id: 2,
   },
   {
     header: "we'll reach out and confirm!",
-    number: "3",
+    number: <FcFeedback />,
     id: 3,
   },
 ];
