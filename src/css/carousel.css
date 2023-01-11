@@ -16,8 +16,7 @@
     width: 100%;
 }
 
-.indicators {
+.buttons {
     display: flex;
     justify-content: center;
-    padding: 10px;
 }
