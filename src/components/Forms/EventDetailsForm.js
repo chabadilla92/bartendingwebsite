@@ -12,11 +12,11 @@ const EventDetailsForm = () => {
   const [eventTime, setEventTime] = useState("");
   const [eventType, setEventType] = useState("");
   const [eventGuests, setEventGuests] = useState("");
-  const [eventHours, setValues] = useState({hours: ""});
+  const [eventHours, setEventHours] = useState({hours: ""});
 
   const onChange = (event, result) => {
     const { name, value } = result || event.target;
-    setValues({ ...eventHours, [name]: value});
+    setEventHours({ [name]: value });
   };
 
 

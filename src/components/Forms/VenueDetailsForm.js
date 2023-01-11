@@ -26,11 +26,29 @@ const VenueDetailsForm = () => {
     barProvided: "",
     tipJarsAllowed: "",
   });
+  const [alcoholTypes, setAlcoholTypes] = useState({
+    beerWine: false,
+    liquorMixedDrink: false,
+    specialCocktail: false,
+    nonAlcoholic: false,
+  });
 
   const onChange = (event, result) => {
     const { name, value } = result || event.target;
     setVenueDetails({ ...venueDetails, [name]: value });
   };
+
+  //TODO: find a way to make this function work 
+  // const handleInputChange = (event) => {
+  //   const target = event.target;
+  //   const value = target.type === "checkbox" ? target.checked : null;
+  //   const name = target.name;
+
+  //   setAlcoholTypes({
+  //     ...alcoholTypes, [name]: !value
+  //   });
+  // }
+  
 
   return (
     <div className="carousel-item">
@@ -93,22 +111,34 @@ const VenueDetailsForm = () => {
           </label>
           <Form.Field
             label="Beer/Wine"
+            name="beerWine"
             control={Checkbox}
+            checked={alcoholTypes.beerWine}
+            onChange={e => setAlcoholTypes({...alcoholTypes, beerWine: !alcoholTypes.beerWine})}
             type="checkbox"
           />
           <Form.Field
             label="Liquor/ Mixed Drinks"
+            name="liquorMixedDrink"
             control={Checkbox}
+            checked={alcoholTypes.liquorMixedDrink}
+            onChange={e => setAlcoholTypes({...alcoholTypes, liquorMixedDrink: !alcoholTypes.liquorMixedDrink})}
             type="checkbox"
           />
           <Form.Field
             label="Specialty Cocktails"
+            name="specialCocktail"
             control={Checkbox}
+            checked={alcoholTypes.specialCocktail}
+            onChange={e => setAlcoholTypes({...alcoholTypes, specialCocktail: !alcoholTypes.specialCocktail})}
             type="checkbox"
           />
           <Form.Field
             label="Non-Alcoholic"
+            name="nonAlcoholic"
             control={Checkbox}
+            checked={alcoholTypes.nonAlcoholic}
+            onChange={e => setAlcoholTypes({...alcoholTypes, nonAlcoholic: !alcoholTypes.nonAlcoholic})}
             type="checkbox"
           />
         </Form.Group>
