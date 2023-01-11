@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Segment } from "semantic-ui-react";
 import Carousel from "./Carousel";
 import EventDetailsForm from "./Forms/EventDetailsForm";
@@ -6,18 +6,17 @@ import VenueDetailsForm from "./Forms/VenueDetailsForm";
 import PersonalDetailsForm from "./Forms/PersonalDetailsForm";
 
 
-//TODO: initialize the states of all of the information that we need for this form
-
-//TODO: create three components for the three different types of inputs we want: 1. field input 2. calendar 3. dropdown. All three of these components will have their own state. This state will be updated via an onChange(), or onSubmit(). These child components will then use the parent setState() from FormCarousel and pass in their child state to update the state object here in FormCarousel. The goal is to take all of the information that the user gives us from FormCarousel, create an object out of it, and then send that up to Firebase.
-
-//NOTE: maybe a better way to organize the components is by questions. Maybe one component for the first form, another component for the calendar, another component for the venue questions. This way there are three components, and will receive labels as props. 
+//TODO: initialize the the parent state that will manage the onFormSubmit button. This will collect all of the objects from each form, and create one new large object to send up to Firebase. 
+//note: Firebase handleAddForm will be in App.js and passed down as props to here, FormCarousel. 
 
 //TODO: create a page that prints out all of their details provided and confirm the details they'd just filled out. Just like the DMV or something.
 
-export const FormCarousel = () => {
+export const FormCarousel = ({ handleCreateDocument }) => {
+  const [formDocument, setFormDocument ] = useState("the whole form")
+
   return (
     <Segment style={{ margin: '55px'}}>
-      <Carousel>
+      <Carousel handleCreateDocument={handleCreateDocument} formDocument={formDocument}>
         <EventDetailsForm />
         <VenueDetailsForm />
         <PersonalDetailsForm />

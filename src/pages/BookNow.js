@@ -36,14 +36,14 @@ const instructionListProps = [
   },
 ];
 
-const BookNow = () => {
+const BookNow = ({ handleCreateDocument }) => {
   return (
     <div>
       <Jumbotron />
       <PageHeader header={firstHeaderProps} />
       <InstructionList instructions={instructionListProps} />
       <PageHeader header={secondHeaderProps} />
-      <FormCarousel />
+      <FormCarousel handleCreateDocument={handleCreateDocument}/>
     </div>
   );
 };

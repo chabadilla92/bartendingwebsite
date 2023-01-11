@@ -15,6 +15,11 @@ class App extends Component {
     this.setState({ activeItem: name });
   };
 
+  handleCreateDocument(formDocument) {
+    //add Firebase createDocument here. 
+    console.log("document is:", formDocument)
+  }
+
   
   render() {
     const { activeItem } = this.state;
@@ -72,7 +77,7 @@ class App extends Component {
             element={<Home handleJumboSelect={this.handleItemClick} />}
           />
           <Route path="/questions" exact element={<Questions />} />
-          <Route path="/booking" exact element={<BookNow />} />
+          <Route path="/booking" exact element={<BookNow handleCreateDocument={this.handleCreateDocument} />} />
         </Routes>
       </BrowserRouter>
     );

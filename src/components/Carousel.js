@@ -3,15 +3,7 @@ import { Button } from "semantic-ui-react";
 
 import "../css/carousel.css";
 
-export const CarouselItem = ({ children, width }) => {
-  return (
-    <div className="carousel-item" style={{ width: width }}>
-      {children}
-    </div>
-  );
-};
-
-const Carousel = ({ children }) => {
+const Carousel = ({ children, handleCreateDocument, formDocument }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const updateIndex = (newIndex) => {
@@ -35,7 +27,7 @@ const Carousel = ({ children }) => {
         })}
       </div>
 
-      <div className="indicators">
+      <div className="buttons">
         <Button
           primary
           onClick={() => {
@@ -55,7 +47,9 @@ const Carousel = ({ children }) => {
             next
           </Button>
         ) : (
-          <Button>submit</Button>
+          <Button
+          onClick={() => handleCreateDocument(formDocument)}
+          >submit</Button>
         )}
       </div>
     </div>
