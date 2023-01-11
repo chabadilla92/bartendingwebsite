@@ -8,10 +8,6 @@ const timeOptions = [
 ];
 
 const EventDetailsForm = () => {
-  // const [eventDate, setEventDate] = useState("");
-  // const [eventTime, setEventTime] = useState("");
-  // const [eventType, setEventType] = useState("");
-  // const [eventGuests, setEventGuests] = useState("");
   const [eventDetails, setEventDetails] = useState({
     date:"",
     time:"",
@@ -32,7 +28,6 @@ const EventDetailsForm = () => {
 
     setEventDetails({...eventDetails, [name]: value});
   };
-  console.log(eventHours)
 
   return (
     <div className="carousel-item">
