@@ -1,9 +1,8 @@
 import "../css/jumbotron.css";
 import booking from "../images/booking.avif";
-import contact from "../images/contact.avif";
 import faq from "../images/faq.avif";
 import home from "../images/home.avif";
-import services from "../images/services.avif";
+
 
 const jumbotronData = [
   {
@@ -13,23 +12,13 @@ const jumbotronData = [
   },
   {
     path: "/booking",
-    title: "book now",
+    title: "services",
     img: <img src={booking} alt="" />,
-  },
-  {
-    path: "/contact",
-    title: "contact us",
-    img: <img src={contact} alt="" />,
   },
   {
     path: "/questions",
     title: "faq",
     img: <img src={faq} alt="" />,
-  },
-  {
-    path: "/services",
-    title: "services",
-    img: <img src={services} alt="" />,
   },
 ];
 

@@ -5,9 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "../css/navBar.css";
 import BookNow from "../pages/BookNow";
-import Contact from "../pages/Contact";
 import Questions from "../pages/Questions";
-import Services from "../pages/Services";
 import Home from "../pages/Home";
 
 class App extends Component {
@@ -16,6 +14,11 @@ class App extends Component {
   handleItemClick = (e, { name }) => {
     this.setState({ activeItem: name });
   };
+
+  handleCreateDocument(newForm) {
+    //add Firebase createDocument here. 
+    console.log("document for Firebase:", newForm)
+  }
 
   
   render() {
@@ -40,21 +43,10 @@ class App extends Component {
                 </Menu.Item>
               </Link>
 
-              <Link to="/services">
-                <Menu.Item
-                  name="/services"
-                  active={activeItem === "/services"}
-                  onClick={this.handleItemClick}
-                  className="item"
-                >
-                  services
-                </Menu.Item>
-              </Link>
-
               <Link to="/booking">
                 <Menu.Item
-                  name="/book now"
-                  active={activeItem === "/book now"}
+                  name="/booking"
+                  active={activeItem === "/booking"}
                   onClick={this.handleItemClick}
                   className="item"
                 >
@@ -73,16 +65,6 @@ class App extends Component {
                 </Menu.Item>
               </Link>
 
-              <Link to="/contact">
-                <Menu.Item
-                  name="/contact"
-                  active={activeItem === "/contact"}
-                  onClick={this.handleItemClick}
-                  className="item"
-                >
-                  contact
-                </Menu.Item>
-              </Link>
             </Menu.Menu>
           </Menu>
           
@@ -94,10 +76,8 @@ class App extends Component {
             exact
             element={<Home handleJumboSelect={this.handleItemClick} />}
           />
-          <Route path="/contact" exact element={<Contact />} />
           <Route path="/questions" exact element={<Questions />} />
-          <Route path="/services" exact element={<Services />} />
-          <Route path="/booking" exact element={<BookNow />} />
+          <Route path="/booking" exact element={<BookNow handleCreateDocument={this.handleCreateDocument} />} />
         </Routes>
       </BrowserRouter>
     );
