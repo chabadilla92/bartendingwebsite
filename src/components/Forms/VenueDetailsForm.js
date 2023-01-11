@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Checkbox, Form, TextArea } from "semantic-ui-react";
 
 const vibeOptions = [
@@ -18,20 +18,7 @@ const publicOptions = [
   { key: "2", text: "Private", value: "Private" },
 ];
 
-const VenueDetailsForm = () => {
-  const [miscellaneousItems, setMiscellaneousItems] = useState("");
-  const [venueDetails, setVenueDetails] = useState({
-    vibe: "",
-    publicPrivate: "",
-    barProvided: "",
-    tipJarsAllowed: "",
-  });
-  const [alcoholTypes, setAlcoholTypes] = useState({
-    beerWine: false,
-    liquorMixedDrink: false,
-    specialCocktail: false,
-    nonAlcoholic: false,
-  });
+const VenueDetailsForm = ({ venueDetails, setVenueDetails, alcoholTypes, setAlcoholTypes }) => {
 
   const onChange = (event, result) => {
     const { name, value } = result || event.target;
@@ -98,8 +85,9 @@ const VenueDetailsForm = () => {
 
         <Form.Field
           control={TextArea}
-          value={miscellaneousItems}
-          onChange={(e) => setMiscellaneousItems(e.target.value)}
+          name="miscellaneousItems"
+          value={venueDetails.miscellaneousItems}
+          onChange={onChange}
           label="Should we bring miscellaneous items?"
           placeholder="Disposable cups, napkins, coasters, etc..."
         />

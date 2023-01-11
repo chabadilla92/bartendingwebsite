@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Form, Input, TextArea } from "semantic-ui-react";
 
 const timeOptions = [
@@ -7,26 +7,11 @@ const timeOptions = [
   { key: "3", text: "4-6", value: "4-6" },
 ];
 
-const EventDetailsForm = () => {
-  const [eventDetails, setEventDetails] = useState({
-    date:"",
-    time:"",
-    occasion:"",
-    guestCount:"",
-  })
-  const [eventHours, setEventHours] = useState({hours: ""});
+const EventDetailsForm = ({ eventDetails, setEventDetails}) => {
 
-  const handleDropdown = (event, result) => {
+  const handleInputChange = (event, result) => {
     const { name, value } = result || event.target;
-    setEventHours({ [name]: value });
-  };
-
-  const handleInputChange = (event) => {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
-
-    setEventDetails({...eventDetails, [name]: value});
+    setEventDetails({...eventDetails, [name]: value });
   };
 
   return (
@@ -53,9 +38,9 @@ const EventDetailsForm = () => {
             name="hours"
             label="How many hours is the event?"
             selection
-            onChange={handleDropdown}
+            onChange={handleInputChange}
             options={timeOptions}
-            value={eventHours.hours}
+            value={eventDetails.eventHours}
           />
         </Form.Group>
         <Form.Field

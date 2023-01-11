@@ -3,7 +3,7 @@ import { Button } from "semantic-ui-react";
 
 import "../css/carousel.css";
 
-const Carousel = ({ children, handleCreateDocument, formDocument }) => {
+const Carousel = ({ children, handleCreateDocument, form }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const updateIndex = (newIndex) => {
@@ -22,8 +22,8 @@ const Carousel = ({ children, handleCreateDocument, formDocument }) => {
         className="inner"
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}
       >
-        {React.Children.map(children, (child, index) => {
-          return React.cloneElement(child, { width: "100%" });
+        {React.Children.map(children, (child) => {
+          return React.cloneElement(child);
         })}
       </div>
 
@@ -48,7 +48,7 @@ const Carousel = ({ children, handleCreateDocument, formDocument }) => {
           </Button>
         ) : (
           <Button
-          onClick={() => handleCreateDocument(formDocument)}
+          onClick={() => handleCreateDocument(form)}
           >submit</Button>
         )}
       </div>

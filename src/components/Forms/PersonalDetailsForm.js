@@ -1,15 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Form, Input, TextArea } from "semantic-ui-react";
 
-const PersonalDetailsForm = () => {
-  const [personalDetails, setPersonalDetails] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    totalBudget: "",
-    zipCode: "",
-    additionalDetails: "",
-  });
+const PersonalDetailsForm = ({ personalDetails, setPersonalDetails }) => {
 
   const handleInputChange = (event) => {
     const target = event.target;

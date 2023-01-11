@@ -5,21 +5,63 @@ import EventDetailsForm from "./Forms/EventDetailsForm";
 import VenueDetailsForm from "./Forms/VenueDetailsForm";
 import PersonalDetailsForm from "./Forms/PersonalDetailsForm";
 
-
-//TODO: initialize the the parent state that will manage the onFormSubmit button. This will collect all of the objects from each form, and create one new large object to send up to Firebase. 
-//note: Firebase handleAddForm will be in App.js and passed down as props to here, FormCarousel. 
+//TODO: figure out how to get the state objects from each form Component up to FormCarousel when the submit button is clicked. 
 
 //TODO: create a page that prints out all of their details provided and confirm the details they'd just filled out. Just like the DMV or something.
 
 export const FormCarousel = ({ handleCreateDocument }) => {
-  const [formDocument, setFormDocument ] = useState("the whole form")
+  const [form, setForm] = useState("")
+  const [eventDetails, setEventDetails] = useState({
+    date:"",
+    time:"",
+    occasion:"",
+    guestCount:"",
+    eventHours:""
+  })
+  const [venueDetails, setVenueDetails] = useState({
+    vibe: "",
+    publicPrivate: "",
+    barProvided: "",
+    tipJarsAllowed: "",
+    miscellaneousItems: ""
+  });
+  const [alcoholTypes, setAlcoholTypes] = useState({
+    beerWine: false,
+    liquorMixedDrink: false,
+    specialCocktail: false,
+    nonAlcoholic: false,
+  });
+  const [personalDetails, setPersonalDetails] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    totalBudget: "",
+    zipCode: "",
+    additionalDetails: "",
+  });
+
 
   return (
-    <Segment style={{ margin: '55px'}}>
-      <Carousel handleCreateDocument={handleCreateDocument} formDocument={formDocument}>
-        <EventDetailsForm />
-        <VenueDetailsForm />
-        <PersonalDetailsForm />
+    <Segment style={{ margin: "55px" }}>
+      <Carousel
+        handleCreateDocument={handleCreateDocument}
+        form={form}
+      >
+        <EventDetailsForm
+        eventDetails={eventDetails}
+        setEventDetails={setEventDetails}
+         />
+
+        <VenueDetailsForm 
+        venueDetails={venueDetails}
+        setVenueDetails={setVenueDetails}
+        alcoholTypes={alcoholTypes}
+        setAlcoholTypes={setAlcoholTypes}
+        />
+        <PersonalDetailsForm 
+        personalDetails={personalDetails}
+        setPersonalDetails={setPersonalDetails}
+        />
       </Carousel>
     </Segment>
   );
