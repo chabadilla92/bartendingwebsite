@@ -10,7 +10,6 @@ import PersonalDetailsForm from "./Forms/PersonalDetailsForm";
 //TODO: create a page that prints out all of their details provided and confirm the details they'd just filled out. Just like the DMV or something.
 
 export const FormCarousel = ({ handleCreateDocument }) => {
-  const [form, setForm] = useState("")
   const [eventDetails, setEventDetails] = useState({
     date:"",
     time:"",
@@ -45,7 +44,10 @@ export const FormCarousel = ({ handleCreateDocument }) => {
     <Segment style={{ margin: "55px" }}>
       <Carousel
         handleCreateDocument={handleCreateDocument}
-        form={form}
+        eventDetails={eventDetails}
+        venueDetails={venueDetails}
+        alcoholTypes={alcoholTypes}
+        personalDetails={personalDetails}
       >
         <EventDetailsForm
         eventDetails={eventDetails}

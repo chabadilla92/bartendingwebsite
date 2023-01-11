@@ -35,7 +35,7 @@ const EventDetailsForm = ({ eventDetails, setEventDetails}) => {
             onChange={handleInputChange}
           />
           <Form.Dropdown
-            name="hours"
+            name="eventHours"
             label="How many hours is the event?"
             selection
             onChange={handleInputChange}

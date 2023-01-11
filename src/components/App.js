@@ -15,9 +15,9 @@ class App extends Component {
     this.setState({ activeItem: name });
   };
 
-  handleCreateDocument(form) {
+  handleCreateDocument(newForm) {
     //add Firebase createDocument here. 
-    console.log("document is:", form)
+    console.log("document for Firebase:", newForm)
   }
 
   
