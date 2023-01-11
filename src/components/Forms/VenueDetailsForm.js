@@ -38,7 +38,7 @@ const VenueDetailsForm = () => {
     setVenueDetails({ ...venueDetails, [name]: value });
   };
 
-  //TODO: find a way to make this function work 
+  //TODO: find a way to make this function work for checkbox state
   // const handleInputChange = (event) => {
   //   const target = event.target;
   //   const value = target.type === "checkbox" ? target.checked : null;
