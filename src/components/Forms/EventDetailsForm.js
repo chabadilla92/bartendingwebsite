@@ -8,17 +8,31 @@ const timeOptions = [
 ];
 
 const EventDetailsForm = () => {
-  const [eventDate, setEventDate] = useState("");
-  const [eventTime, setEventTime] = useState("");
-  const [eventType, setEventType] = useState("");
-  const [eventGuests, setEventGuests] = useState("");
+  // const [eventDate, setEventDate] = useState("");
+  // const [eventTime, setEventTime] = useState("");
+  // const [eventType, setEventType] = useState("");
+  // const [eventGuests, setEventGuests] = useState("");
+  const [eventDetails, setEventDetails] = useState({
+    date:"",
+    time:"",
+    occasion:"",
+    guestCount:"",
+  })
   const [eventHours, setEventHours] = useState({hours: ""});
 
-  const onChange = (event, result) => {
+  const handleDropdown = (event, result) => {
     const { name, value } = result || event.target;
     setEventHours({ [name]: value });
   };
 
+  const handleInputChange = (event) => {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+
+    setEventDetails({...eventDetails, [name]: value});
+  };
+  console.log(eventHours)
 
   return (
     <div className="carousel-item">
@@ -28,21 +42,23 @@ const EventDetailsForm = () => {
             control={Input}
             label="When is your event?"
             placeholder="e.g. 10/27/22..."
-            value={eventDate}
-            onChange={(e) => setEventDate(e.target.value)}
+            value={eventDetails.date}
+            name="date"
+            onChange={handleInputChange}
           />
           <Form.Field
             control={Input}
             label="What time?"
             placeholder="Guests arrive..."
-            value={eventTime}
-            onChange={(e) => setEventTime(e.target.value)}
+            value={eventDetails.time}
+            name="time"
+            onChange={handleInputChange}
           />
           <Form.Dropdown
             name="hours"
             label="How many hours is the event?"
             selection
-            onChange={onChange}
+            onChange={handleDropdown}
             options={timeOptions}
             value={eventHours.hours}
           />
@@ -51,16 +67,18 @@ const EventDetailsForm = () => {
           control={TextArea}
           label="What kind of event are you hosting?"
           placeholder="Special Occasion, Work Event, etc..."
-          value={eventType}
-          onChange={(e) => setEventType(e.target.value)}
+          value={eventDetails.occasion}
+          name="occasion"
+          onChange={handleInputChange}
         />
         <Form.Field
           fluid={true}
           control={Input}
           label="How many guests?"
           placeholder="Estimated Figure..."
-          value={eventGuests}
-          onChange={(e) => setEventGuests(e.target.value)}
+          value={eventDetails.guestCount}
+          name="guestCount"
+          onChange={handleInputChange}
         />
       </Form>
     </div>
