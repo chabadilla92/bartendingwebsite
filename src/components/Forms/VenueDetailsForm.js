@@ -20,29 +20,17 @@ const publicOptions = [
 
 const VenueDetailsForm = ({ venueDetails, setVenueDetails, alcoholTypes, setAlcoholTypes }) => {
 
-  const onChange = (event, result) => {
+  const handleInputChange = (event, result) => {
     const { name, value } = result || event.target;
     setVenueDetails({ ...venueDetails, [name]: value });
   };
-
-  //TODO: find a way to make this function work for checkbox state
-  // const handleInputChange = (event) => {
-  //   const target = event.target;
-  //   const value = target.type === "checkbox" ? target.checked : null;
-  //   const name = target.name;
-
-  //   setAlcoholTypes({
-  //     ...alcoholTypes, [name]: !value
-  //   });
-  // }
-  
 
   return (
     <div className="carousel-item">
       <Form>
         <Form.Group widths="equal">
           <Form.Dropdown
-            onChange={onChange}
+            onChange={handleInputChange}
             name="vibe"
             value={venueDetails.vibe}
             selection
@@ -52,7 +40,7 @@ const VenueDetailsForm = ({ venueDetails, setVenueDetails, alcoholTypes, setAlco
             }}
           />
           <Form.Dropdown
-            onChange={onChange}
+            onChange={handleInputChange}
             name="publicPrivate"
             value={venueDetails.publicPrivate}
             selection
@@ -62,7 +50,7 @@ const VenueDetailsForm = ({ venueDetails, setVenueDetails, alcoholTypes, setAlco
             }}
           />
           <Form.Dropdown
-            onChange={onChange}
+            onChange={handleInputChange}
             name="barProvided"
             value={venueDetails.barProvided}
             selection
@@ -72,7 +60,7 @@ const VenueDetailsForm = ({ venueDetails, setVenueDetails, alcoholTypes, setAlco
             }}
           />
           <Form.Dropdown
-            onChange={onChange}
+            onChange={handleInputChange}
             name="tipJarsAllowed"
             value={venueDetails.tipJarsAllowed}
             selection
@@ -87,7 +75,7 @@ const VenueDetailsForm = ({ venueDetails, setVenueDetails, alcoholTypes, setAlco
           control={TextArea}
           name="miscellaneousItems"
           value={venueDetails.miscellaneousItems}
-          onChange={onChange}
+          onChange={handleInputChange}
           label="Should we bring miscellaneous items?"
           placeholder="Disposable cups, napkins, coasters, etc..."
         />

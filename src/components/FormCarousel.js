@@ -5,8 +5,6 @@ import EventDetailsForm from "./Forms/EventDetailsForm";
 import VenueDetailsForm from "./Forms/VenueDetailsForm";
 import PersonalDetailsForm from "./Forms/PersonalDetailsForm";
 
-//TODO: figure out how to get the state objects from each form Component up to FormCarousel when the submit button is clicked. 
-
 //TODO: create a page that prints out all of their details provided and confirm the details they'd just filled out. Just like the DMV or something.
 
 export const FormCarousel = ({ handleCreateDocument }) => {
