@@ -44,6 +44,7 @@ const PersonalDetailsForm = ({ personalDetails, setPersonalDetails }) => {
         <Form.Group widths="equal">
           <Form.Field
             name="totalBudget"
+            placeholder="$"
             value={personalDetails.totalBudget}
             onChange={handleInputChange}
             control={Input}

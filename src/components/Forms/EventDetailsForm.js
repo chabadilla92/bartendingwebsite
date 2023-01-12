@@ -45,7 +45,7 @@ const EventDetailsForm = ({ eventDetails, setEventDetails}) => {
         </Form.Group>
         <Form.Field
           control={TextArea}
-          label="What kind of event are you hosting?"
+          label="What's the occasion?"
           placeholder="Special Occasion, Work Event, etc..."
           value={eventDetails.occasion}
           name="occasion"
