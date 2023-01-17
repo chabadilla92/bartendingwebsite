@@ -14,6 +14,7 @@ const EventDetailsForm = ({ eventDetails, setEventDetails}) => {
     setEventDetails({...eventDetails, [name]: value });
   };
 
+
   return (
     <div className="carousel-item">
       <Form>

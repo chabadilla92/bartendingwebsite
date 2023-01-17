@@ -30,7 +30,7 @@ const Jumbotron = () => {
         if (data.path === window.location.pathname) {
           return (
             <div className="jumbotron" key={data.path}>
-              <div className="title">{data.title}</div>
+              <div className="jumbo-title">{data.title}</div>
               <div className="ui fluid image">{data.img}</div>
             </div>
           );

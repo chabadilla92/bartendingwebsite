@@ -1,6 +1,7 @@
 import React from "react";
 import { FcTodoList, FcFeedback, FcFlashOn  } from "react-icons/fc";
 import {  } from "react-icons/gi";
+import Footer from "../components/Footer";
 
 
 import { FormCarousel } from "../components/FormCarousel";
@@ -44,6 +45,7 @@ const BookNow = ({ handleCreateDocument }) => {
       <InstructionList instructions={instructionListProps} />
       <PageHeader header={secondHeaderProps} />
       <FormCarousel handleCreateDocument={handleCreateDocument}/>
+      <Footer />
     </div>
   );
 };

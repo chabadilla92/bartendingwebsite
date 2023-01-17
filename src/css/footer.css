@@ -1,0 +1,13 @@
+.footer{
+    width: 100%;
+    background-color: rgb(208, 232, 253);
+    padding: 90px;
+}
+
+.footer-icons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+}
