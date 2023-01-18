@@ -7,7 +7,6 @@ import { Divider } from "semantic-ui-react";
 
 import home from "../images/home.avif";
 import Jumbotron from "../components/Jumbotron";
-import Footer from "../components/Footer";
 
 
 const headerProps = {
@@ -45,7 +44,7 @@ const Home = ({ handleJumboSelect }) => {
         path={buttonProps.path}
       />
       <ImageGroup />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

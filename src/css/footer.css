@@ -4,10 +4,14 @@
     padding: 90px;
 }
 
-.footer-icons{
+.footer-icon-container{
     display: flex;
     justify-content: flex-end;
     align-items: center;
     font-size: 30px;
-    cursor: pointer;
 }
+
+.footer-icon, svg{
+    color: black;
+}
+

@@ -1,6 +1,5 @@
 import React from "react";
 import AccordionContainer from "../components/AccordionContainer";
-import Footer from "../components/Footer";
 import Jumbotron from "../components/Jumbotron";
 import PageHeader from "../components/PageHeader";
 
@@ -48,7 +47,7 @@ const Questions = () => {
       <Jumbotron />
       <PageHeader header={header} />
       <AccordionContainer panels={panels}/>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

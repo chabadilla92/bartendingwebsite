@@ -7,6 +7,7 @@ import "../css/navBar.css";
 import BookNow from "../pages/BookNow";
 import Questions from "../pages/Questions";
 import Home from "../pages/Home";
+import Footer from "./Footer";
 
 class App extends Component {
   state = {};
@@ -78,7 +79,9 @@ class App extends Component {
           />
           <Route path="/questions" exact element={<Questions />} />
           <Route path="/booking" exact element={<BookNow handleCreateDocument={this.handleCreateDocument} />} />
+          {/* <Route to="/" exact element={<Footer />} /> */}
         </Routes>
+        <Footer />
       </BrowserRouter>
     );
   }
