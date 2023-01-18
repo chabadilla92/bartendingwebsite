@@ -3,7 +3,7 @@ import booking from "../images/booking.avif";
 import faq from "../images/faq.avif";
 import home from "../images/home.avif";
 
-
+//TODO: Replace img value with real iamges from events. 
 const jumbotronData = [
   {
     path: "/",

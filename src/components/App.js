@@ -18,7 +18,7 @@ class App extends Component {
   };
 
   handleCreateDocument(newForm) {
-    //add Firebase createDocument here. 
+    //TODO: add Firebase createDocument here. 
     console.log(newForm)
   }
 
@@ -31,6 +31,7 @@ class App extends Component {
         <div className="navbar">
           <Menu tabular>
             <Header as="h1">
+              {/* TODO: Replace Icon with real logo svg */}
               <Icon circular name="beer" />
             </Header>
             <Menu.Menu position="right">
