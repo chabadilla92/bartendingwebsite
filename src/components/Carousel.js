@@ -1,9 +1,21 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "semantic-ui-react";
 
 import "../css/carousel.css";
 
-const Carousel = ({ children, handleCreateDocument, eventDetails, venueDetails, alcoholTypes, personalDetails }) => {
+const Carousel = ({
+  children,
+  handleCreateDocument,
+  eventDetails,
+  venueDetails,
+  alcoholTypes,
+  personalDetails,
+  handleEventDetails,
+  handleVenueDetails,
+  handleAlcoholTypes,
+  handlePersonalDetails,
+}) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const updateIndex = (newIndex) => {
@@ -17,16 +29,15 @@ const Carousel = ({ children, handleCreateDocument, eventDetails, venueDetails, 
   };
 
   const handleCreateNewForm = (e) => {
-
     const newForm = {
       eventDetails,
       venueDetails,
       alcoholTypes,
       personalDetails,
-    }
+    };
 
-    handleCreateDocument(newForm)
-  }
+    handleCreateDocument(newForm);
+  };
 
   return (
     <div className="carousel">
@@ -59,9 +70,19 @@ const Carousel = ({ children, handleCreateDocument, eventDetails, venueDetails, 
             next
           </Button>
         ) : (
-          <Button
-          onClick={() => handleCreateNewForm()}
-          >submit</Button>
+          <Link to="/confirmation">
+            <Button
+              onClick={() =>
+                handleCreateNewForm() &&
+                handleEventDetails("") &&
+                handleAlcoholTypes("") &&
+                handlePersonalDetails("")&&
+                handleVenueDetails("")
+              }
+            >
+              submit
+            </Button>
+          </Link>
         )}
       </div>
     </div>
