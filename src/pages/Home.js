@@ -44,7 +44,6 @@ const Home = ({ handleJumboSelect }) => {
         path={buttonProps.path}
       />
       <ImageGroup />
-      {/* <Footer /> */}
     </div>
   );
 };

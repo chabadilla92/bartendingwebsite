@@ -8,6 +8,7 @@ import BookNow from "../pages/BookNow";
 import Questions from "../pages/Questions";
 import Home from "../pages/Home";
 import Footer from "./Footer";
+import Confirmation from "../pages/Confirmation";
 
 class App extends Component {
   state = {};
@@ -18,7 +19,7 @@ class App extends Component {
 
   handleCreateDocument(newForm) {
     //add Firebase createDocument here. 
-    console.log("document for Firebase:", newForm)
+    console.log(newForm)
   }
 
   
@@ -79,7 +80,7 @@ class App extends Component {
           />
           <Route path="/questions" exact element={<Questions />} />
           <Route path="/booking" exact element={<BookNow handleCreateDocument={this.handleCreateDocument} />} />
-          {/* <Route to="/" exact element={<Footer />} /> */}
+          <Route path="/confirmation" exact element={<Confirmation />} />
         </Routes>
         <Footer />
       </BrowserRouter>

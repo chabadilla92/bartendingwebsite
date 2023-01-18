@@ -44,7 +44,6 @@ const BookNow = ({ handleCreateDocument }) => {
       <InstructionList instructions={instructionListProps} />
       <PageHeader header={secondHeaderProps} />
       <FormCarousel handleCreateDocument={handleCreateDocument}/>
-      {/* <Footer /> */}
     </div>
   );
 };

@@ -47,7 +47,6 @@ const Questions = () => {
       <Jumbotron />
       <PageHeader header={header} />
       <AccordionContainer panels={panels}/>
-      {/* <Footer /> */}
     </div>
   );
 };
