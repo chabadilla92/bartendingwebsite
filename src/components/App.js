@@ -7,6 +7,8 @@ import "../css/navBar.css";
 import BookNow from "../pages/BookNow";
 import Questions from "../pages/Questions";
 import Home from "../pages/Home";
+import Footer from "./Footer";
+import Confirmation from "../pages/Confirmation";
 
 class App extends Component {
   state = {};
@@ -16,8 +18,8 @@ class App extends Component {
   };
 
   handleCreateDocument(newForm) {
-    //add Firebase createDocument here. 
-    console.log("document for Firebase:", newForm)
+    //TODO: add Firebase createDocument here. 
+    console.log(newForm)
   }
 
   
@@ -29,6 +31,7 @@ class App extends Component {
         <div className="navbar">
           <Menu tabular>
             <Header as="h1">
+              {/* TODO: Replace Icon with real logo svg */}
               <Icon circular name="beer" />
             </Header>
             <Menu.Menu position="right">
@@ -78,7 +81,9 @@ class App extends Component {
           />
           <Route path="/questions" exact element={<Questions />} />
           <Route path="/booking" exact element={<BookNow handleCreateDocument={this.handleCreateDocument} />} />
+          <Route path="/confirmation" exact element={<Confirmation />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     );
   }
