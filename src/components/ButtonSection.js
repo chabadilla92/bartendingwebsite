@@ -16,7 +16,6 @@ const ButtonSection = ({ header, buttonText, path, handleJumboSelect }) => {
     handleJumboSelect(activeItem, name)
   }
 
-
   return (
     <Wrapper>
       <Container>

@@ -1,0 +1,17 @@
+.footer{
+    width: 100%;
+    background-color: rgb(208, 232, 253);
+    padding: 90px;
+}
+
+.footer-icon-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 30px;
+}
+
+.footer-icon, svg{
+    color: black;
+}
+

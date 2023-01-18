@@ -26,6 +26,7 @@ const ImageAndInfo = ({ image, title, description }) => {
       <Grid columns={2} relaxed="very" stackable>
         <Grid.Column>
           <Img>
+          {/* Replace this image with event image */}
             <Image src={image} fluid />
           </Img>
         </Grid.Column>
