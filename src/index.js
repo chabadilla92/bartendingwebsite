@@ -1,8 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import App from './components/App';
+import firebaseConfig from './firebase-config';
+import { FirebaseAppProvider } from 'reactfire';
+import { FirebaseProviders } from './firebase-providers';
 
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
-ReactDOM.render(
-    <App />, document.querySelector('#root')
+root.render(
+  <FirebaseAppProvider firebaseConfig={firebaseConfig}>
+    <FirebaseProviders>
+      <App />
+    </FirebaseProviders>
+  </FirebaseAppProvider>
 );
