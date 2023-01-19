@@ -1,8 +1,10 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Button } from "semantic-ui-react";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from 'semantic-ui-react';
+import { useFirestore } from 'reactfire';
+import { doc, query, collection, addDoc } from 'firebase/firestore';
 
-import "../css/carousel.css";
+import '../css/carousel.css';
 
 const Carousel = ({
   children,
@@ -16,6 +18,8 @@ const Carousel = ({
   handleAlcoholTypes,
   handlePersonalDetails,
 }) => {
+  const db = useFirestore();
+  const customerDetailsQuery = query(collection(db, 'customerDetails'));
   const [activeIndex, setActiveIndex] = useState(0);
 
   const updateIndex = (newIndex) => {
@@ -36,13 +40,13 @@ const Carousel = ({
       personalDetails,
     };
 
-    handleCreateDocument(newForm);
+    addDoc(customerDetailsQuery, { ...newForm });
   };
 
   return (
-    <div className="carousel">
+    <div className='carousel'>
       <div
-        className="inner"
+        className='inner'
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}
       >
         {React.Children.map(children, (child) => {
@@ -50,7 +54,7 @@ const Carousel = ({
         })}
       </div>
 
-      <div className="buttons">
+      <div className='buttons'>
         <Button
           primary
           onClick={() => {
@@ -70,14 +74,14 @@ const Carousel = ({
             next
           </Button>
         ) : (
-          <Link to="/confirmation">
+          <Link to='/confirmation'>
             <Button
               onClick={() =>
                 handleCreateNewForm() &&
-                handleEventDetails("") &&
-                handleAlcoholTypes("") &&
-                handlePersonalDetails("")&&
-                handleVenueDetails("")
+                handleEventDetails('') &&
+                handleAlcoholTypes('') &&
+                handlePersonalDetails('') &&
+                handleVenueDetails('')
               }
             >
               submit
