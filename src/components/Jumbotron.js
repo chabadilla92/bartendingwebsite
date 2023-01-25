@@ -1,39 +1,35 @@
-import "../css/jumbotron.css";
-import booking from "../images/booking.avif";
-import faq from "../images/faq.avif";
-import home from "../images/home.avif";
+import '../css/jumbotron.css';
+import booking from '../images/booking.avif';
+import faq from '../images/faq.avif';
+import home from '../images/home.avif';
+import chilldbottles from '../images/chilldbottles.jpg';
+import logocopy from '../images/logocopy.svg';
 
-//TODO: Replace img value with real iamges from events. 
+//TODO: Replace img value with real iamges from events.
 const jumbotronData = [
   {
-    path: "/",
-    title: "welcome",
-    img: <img src={home} alt="" />,
+    path: '/',
+    title: <img src={logocopy} />,
+    img: <img src={null} alt='' />,
   },
   {
-    path: "/booking",
-    title: "services",
-    img: <img src={booking} alt="" />,
+    path: '/booking',
+    title: 'services',
+    img: <img src={booking} alt='' />,
   },
   {
-    path: "/questions",
-    title: "faq",
-    img: <img src={faq} alt="" />,
+    path: '/questions',
+    title: 'faq',
+    img: <img src={faq} alt='' />,
   },
 ];
 
 const Jumbotron = () => {
-
   return (
-    <div>
+    <div className='parallaxContainer'>
       {jumbotronData.map((data) => {
         if (data.path === window.location.pathname) {
-          return (
-            <div className="jumbotron" key={data.path}>
-              <div className="jumbo-title">{data.title}</div>
-              <div className="ui fluid image">{data.img}</div>
-            </div>
-          );
+          return <div className='jumbo-title'>{data.title}</div>;
         } else {
           return null;
         }

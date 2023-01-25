@@ -5,18 +5,19 @@ import ButtonSection from "../components/ButtonSection";
 import ImageGroup from "../components/ImageGroup";
 import { Divider } from "semantic-ui-react";
 
+import socialbar from "../images/socialbar.jpg"
 import home from "../images/home.avif";
 import Jumbotron from "../components/Jumbotron";
 
 
 const headerProps = {
-  title: "Just Chill'd",
-  subheader: "bartending website testing subheader",
+  title: "",
+  subheader: "",
 };
 
 const buttonProps = {
   header: "planning your next event?",
-  buttonText: "Book Now",
+  buttonText: "book now.",
   path: "/booking",
 };
 
@@ -30,13 +31,11 @@ const Home = ({ handleJumboSelect }) => {
   return (
     <div className="home">
       <Jumbotron />
-      <PageHeader header={headerProps} />
       <ImageAndInfo
-        image={home}
+        image={socialbar}
         title={infoProps.title}
         description={infoProps.description}
       />
-      <Divider />
       <ButtonSection
         handleJumboSelect={handleJumboSelect}
         buttonText={buttonProps.buttonText}

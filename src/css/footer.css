@@ -1,6 +1,8 @@
 .footer{
     width: 100%;
-    background-color: rgb(208, 232, 253);
+    /* space gray: */
+    /* background-color: #1e3231; */
+    background-color: #bdc2bf;
     padding: 90px;
 }
 

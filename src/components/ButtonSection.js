@@ -1,34 +1,42 @@
-import { useState } from "react";
-import styled from "styled-components";
-import { Button, Header, Container } from "semantic-ui-react";
-import { Link } from "react-router-dom";
+import { useState } from 'react';
+import styled from 'styled-components';
+import { Button, Header, Container } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+
+import '../css/buttonsection.css'
 
 const Wrapper = styled.div`
-  margin-top: 50px;
+  margin-top: 12.5rem;
 `;
 
-
 const ButtonSection = ({ header, buttonText, path, handleJumboSelect }) => {
-  const [activeItem, setActiveItem] = useState("")
+  const [activeItem, setActiveItem] = useState('');
 
-  const handleJumboImage = (e, {name}) => {
-    setActiveItem({name})
-    handleJumboSelect(activeItem, name)
-  }
+  const handleJumboImage = (e, { name }) => {
+    setActiveItem({ name });
+    handleJumboSelect(activeItem, name);
+  };
 
   return (
     <Wrapper>
       <Container>
-        <Header as="h1" textAlign="center" dividing>
+        <Header as='h1' textAlign='center'>
           <p>{header}</p>
           <Link to={path}>
             <Button
-             primary
-             name={path}
-             active={activeItem === {path}}
-             onClick={handleJumboImage}
-             style={{marginBottom: "15px"}}
-             >{buttonText}</Button>
+              primary
+              name={path}
+              active={activeItem === { path }}
+              onClick={handleJumboImage}
+              style={{ 
+                marginBottom: '15px',
+                backgroundColor: '#e6e49f',
+                color: 'black',
+                fontFamily: 'Secular One, sans-serif'
+              }}
+            >
+              {buttonText}
+            </Button>
           </Link>
         </Header>
       </Container>

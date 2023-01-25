@@ -1,27 +1,26 @@
-.jumbotron{
-    margin-top: 3px;
-    position: relative;
-    display: flex;
+.parallaxContainer {
+  min-height: 45vh;
+  background-image: url('../images/chilldbottles.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
-.jumbotron .ui.fluid.image img{
-    display: flex;
-    object-fit: cover;
-    height: 65vh;
-    width: 100%;
-    position: relative;
+.jumbo-title {
+  font-size: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  background: none transparent;
+  font-family: 'Secular One', sans-serif;
+  bottom: -9px;
+  color: black;
+  right: 3.25rem;
+  height: 3.85rem;
+  width: 22.5rem;
+  padding-left: 0.6rem;
 }
-
-.jumbo-title{
-    font-size: 50px;
-    margin-left: 15px;
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgb(255, 255, 255);
-    position: absolute;
-    z-index: 1;
-    background: none transparent;
-}
-

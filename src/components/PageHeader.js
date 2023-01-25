@@ -15,7 +15,6 @@ const PageHeader = ({ header }) => {
           content={header.title}
           subheader={header.subheader}
           textAlign="center"
-          dividing
         ></Header>
       </Container>
     </Wrapper>

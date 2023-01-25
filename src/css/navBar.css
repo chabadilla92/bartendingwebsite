@@ -1,14 +1,41 @@
-
-.navbar .ui.tabular.menu{
-    padding-top: 15px ;
-    background-color: rgb(208, 232, 253);
+.navbar {
+  height: 12vh;
+  position: relative;
+  border-bottom: 1px solid rgb(233, 228, 228);
 }
 
-.ui.tabular.menu .ui.menu:not(.vertical) .right.item, .ui.menu:not(.vertical) .right.menu{
-    justify-content: space-around;
-    align-items: end;
+.navbar .ui.tabular.menu {
+  bottom: 0;
+  background-color: white;
+  position: absolute;
+  justify-content: space-between;
+  width: 100%;
+  font-family: 'Secular One', sans-serif;
 }
 
-.ui.container .ui.menu:first-child{
-    margin-top: 10px;
+.ui.tabular.menu .ui.menu:not(.vertical) .right.item,
+.ui.menu:not(.vertical) .right.menu {
+  justify-content: space-around;
+  align-items: end;
+}
+
+.ui.container .ui.menu:first-child {
+  margin-top: 10px;
+}
+
+.mainHeader {
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-bottom: 0;
+}
+
+.logoImage {
+  object-fit: cover;
+}
+
+.ui.tabular.menu .active.item {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid rgb(233, 228, 228);
 }

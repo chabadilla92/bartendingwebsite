@@ -24,22 +24,22 @@ const ImageGroup = () => {
       <Grid columns={4} stackable>
         <Grid.Column>
           <Img>
-            <Image src={home} fluid />
+            <Image src={null} fluid />
           </Img>
         </Grid.Column>
         <Grid.Column>
           <Img>
-            <Image src={booking} fluid />
+            <Image src={null} fluid />
           </Img>
         </Grid.Column>
         <Grid.Column>
           <Img>
-            <Image src={contact} fluid />
+            <Image src={null} fluid />
           </Img>
         </Grid.Column>
         <Grid.Column>
           <Img>
-            <Image src={booking} fluid />
+            <Image src={null} fluid />
           </Img>
         </Grid.Column>
       </Grid>
