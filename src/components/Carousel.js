@@ -8,11 +8,12 @@ import '../css/carousel.css';
 
 const Carousel = ({
   children,
-  handleCreateDocument,
   eventDetails,
+  extraItems,
   venueDetails,
   alcoholTypes,
   personalDetails,
+  handleExtraItems,
   handleEventDetails,
   handleVenueDetails,
   handleAlcoholTypes,
@@ -37,9 +38,10 @@ const Carousel = ({
       eventDetails,
       venueDetails,
       alcoholTypes,
+      extraItems,
       personalDetails,
     };
-
+    console.log(newForm)
     addDoc(customerDetailsQuery, { ...newForm });
   };
 
@@ -81,6 +83,7 @@ const Carousel = ({
                 handleEventDetails('') &&
                 handleAlcoholTypes('') &&
                 handlePersonalDetails('') &&
+                handleExtraItems('') &&
                 handleVenueDetails('')
               }
             >

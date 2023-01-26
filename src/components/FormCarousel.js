@@ -23,11 +23,23 @@ export const FormCarousel = ({ handleCreateDocument }) => {
     miscellaneousItems: '',
   });
   const [alcoholTypes, setAlcoholTypes] = useState({
-    beerWine: false,
-    liquorMixedDrink: false,
+    beer: false,
+    wine: false,
+    liquor: false,
+    mixedWellDrink: false,
+    virginCocktails: false,
     specialCocktail: false,
-    nonAlcoholic: false,
+    juices: false,
+    soda: false,
+    clubSoda: false
   });
+  const [extraItems, setExtraItems] = useState({
+    napkins: false,
+    glassCups: false,
+    disposableCups: false,
+    ice: false,
+    straws: false
+  })
   const [personalDetails, setPersonalDetails] = useState({
     firstName: '',
     lastName: '',
@@ -46,6 +58,8 @@ export const FormCarousel = ({ handleCreateDocument }) => {
         venueDetails={venueDetails}
         alcoholTypes={alcoholTypes}
         personalDetails={personalDetails}
+        extraItems={extraItems}
+        handleExtraItems={setExtraItems}
         handleEventDetails={setEventDetails}
         handleVenueDetails={setVenueDetails}
         handleAlcoholTypes={setAlcoholTypes}
@@ -61,6 +75,8 @@ export const FormCarousel = ({ handleCreateDocument }) => {
           setVenueDetails={setVenueDetails}
           alcoholTypes={alcoholTypes}
           setAlcoholTypes={setAlcoholTypes}
+          extraItems={extraItems}
+          setExtraItems={setExtraItems}
         />
 
         <PersonalDetailsForm
