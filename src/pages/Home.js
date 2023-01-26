@@ -1,19 +1,11 @@
 import React from "react";
-import PageHeader from "../components/PageHeader";
 import ImageAndInfo from "../components/ImageAndInfo";
 import ButtonSection from "../components/ButtonSection";
 import ImageGroup from "../components/ImageGroup";
-import { Divider } from "semantic-ui-react";
 
 import socialbar from "../images/socialbar.jpg"
-import home from "../images/home.avif";
 import Jumbotron from "../components/Jumbotron";
 
-
-const headerProps = {
-  title: "",
-  subheader: "",
-};
 
 const buttonProps = {
   header: "planning your next event?",

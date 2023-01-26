@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Image, Grid, Divider } from 'semantic-ui-react';
+import { Image, Grid} from 'semantic-ui-react';
 
 import '../css/imageandinfo.css';
 
@@ -13,7 +13,6 @@ const Wrapper = styled.div`
 const Img = styled.div`
   object-fit: contain;
   border: 1px solid black;
-  width: 30vw;
   margin: 2rem auto;
 `;
 
@@ -34,7 +33,7 @@ const ImageAndInfo = ({ image, title, description }) => {
       <Grid columns={2} relaxed='very' stackable>
         <Grid.Column>
           <Img>
-            {/* Replace this image with event image */}
+            {/* TODO: Replace this image with event image */}
             <Image src={image} fluid />
           </Img>
         </Grid.Column>
