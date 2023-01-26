@@ -20,24 +20,24 @@ const PersonalDetailsForm = ({ personalDetails, setPersonalDetails }) => {
             name="firstName"
             value={personalDetails.firstName}
             onChange={handleInputChange}
-            label="First Name"
-            placeholder="First Name..."
+            label="first name"
+            placeholder="first name..."
           />
           <Form.Field
             name="lastName"
             value={personalDetails.lastName}
             onChange={handleInputChange}
             control={Input}
-            label="Last Name"
-            placeholder="Last Name..."
+            label="last name"
+            placeholder="last name..."
           />
           <Form.Field
             name="email"
             value={personalDetails.email}
             onChange={handleInputChange}
             control={Input}
-            label="Email"
-            placeholder="Email..."
+            label="email"
+            placeholder="email..."
           />
         </Form.Group>
 
@@ -48,15 +48,15 @@ const PersonalDetailsForm = ({ personalDetails, setPersonalDetails }) => {
             value={personalDetails.totalBudget}
             onChange={handleInputChange}
             control={Input}
-            label="What is your Total Budget?"
+            label="what is your budget (total cost for liquor + services) ?"
           />
           <Form.Field
             name="zipCode"
             value={personalDetails.zipCode}
             onChange={handleInputChange}
             control={Input}
-            label="Please Confirm Where you Need the Bartender"
-            placeholder="Enter Zipcode of Event..."
+            label="where is the event located?"
+            placeholder="enter zip code..."
           />
         </Form.Group>
         <Form.Field
@@ -64,8 +64,8 @@ const PersonalDetailsForm = ({ personalDetails, setPersonalDetails }) => {
           value={personalDetails.additionalDetails}
           onChange={handleInputChange}
           control={TextArea}
-          label="Any Additional Details We Need to Know? "
-          placeholder="Optional Details Here..."
+          label="anything else we should know? "
+          placeholder="optional details here..."
         />
       </Form>
     </div>

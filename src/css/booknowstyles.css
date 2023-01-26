@@ -1,0 +1,31 @@
+.ui.header:last-child {
+  font-family: 'Secular One', sans-serif;
+}
+
+.bookNowContainer {
+
+
+  width: 100vw;
+}
+
+.paragraph {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2rem;
+}
+
+.paragraphTwo {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.paragraphContainer {
+  text-align: center;
+  margin: 5rem auto;
+  padding: 2rem;
+}
+
+.carouselContainer {
+  margin: 5rem auto;
+  padding: 2rem;
+}

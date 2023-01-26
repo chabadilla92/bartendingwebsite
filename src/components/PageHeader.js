@@ -1,22 +1,21 @@
-import React from "react";
-import styled from "styled-components";
-import { Header, Container } from "semantic-ui-react";
+import React from 'react';
+import styled from 'styled-components';
+import { Header } from 'semantic-ui-react';
+
+import '../css/booknowstyles.css';
 
 const Wrapper = styled.div`
-  margin-top: 50px;
+  padding-bottom: 1rem;
 `;
 
 const PageHeader = ({ header }) => {
   return (
     <Wrapper>
-      <Container>
-        <Header
-          as="h1"
-          content={header.title}
-          subheader={header.subheader}
-          textAlign="center"
-        ></Header>
-      </Container>
+      <Header
+        as='h1'
+        content={header.title}
+        subheader={header.subheader}
+      ></Header>
     </Wrapper>
   );
 };

@@ -1,9 +1,10 @@
 .footer{
     width: 100%;
     /* space gray: */
-    /* background-color: #1e3231; */
-    background-color: #bdc2bf;
-    padding: 90px;
+    background-color: #1e3231;
+
+
+    height: 25vh;
 }
 
 .footer-icon-container{
@@ -11,9 +12,10 @@
     justify-content: flex-end;
     align-items: center;
     font-size: 30px;
+    padding: 2rem 2rem 1rem 1rem;
 }
 
 .footer-icon, svg{
-    color: black;
+    color: white;
 }
 

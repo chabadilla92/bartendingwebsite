@@ -1,24 +1,26 @@
-import React, { useState } from "react";
-import { Segment } from "semantic-ui-react";
-import Carousel from "./Carousel";
-import EventDetailsForm from "./Forms/EventDetailsForm";
-import VenueDetailsForm from "./Forms/VenueDetailsForm";
-import PersonalDetailsForm from "./Forms/PersonalDetailsForm";
+import React, { useState } from 'react';
+import { Segment } from 'semantic-ui-react';
+import Carousel from './Carousel';
+import EventDetailsForm from './Forms/EventDetailsForm';
+import VenueDetailsForm from './Forms/VenueDetailsForm';
+import PersonalDetailsForm from './Forms/PersonalDetailsForm';
+
+import '../css/carousel.css';
 
 export const FormCarousel = ({ handleCreateDocument }) => {
   const [eventDetails, setEventDetails] = useState({
-    date: "",
-    time: "",
-    occasion: "",
-    guestCount: "",
-    eventHours: "",
+    date: '',
+    time: '',
+    occasion: '',
+    guestCount: '',
+    eventHours: '',
   });
   const [venueDetails, setVenueDetails] = useState({
-    vibe: "",
-    publicPrivate: "",
-    barProvided: "",
-    tipJarsAllowed: "",
-    miscellaneousItems: "",
+    vibe: '',
+    publicPrivate: '',
+    barProvided: '',
+    tipJarsAllowed: '',
+    miscellaneousItems: '',
   });
   const [alcoholTypes, setAlcoholTypes] = useState({
     beerWine: false,
@@ -27,16 +29,17 @@ export const FormCarousel = ({ handleCreateDocument }) => {
     nonAlcoholic: false,
   });
   const [personalDetails, setPersonalDetails] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    totalBudget: "",
-    zipCode: "",
-    additionalDetails: "",
+    firstName: '',
+    lastName: '',
+    email: '',
+    totalBudget: '',
+    zipCode: '',
+    additionalDetails: '',
   });
 
   return (
-    <Segment style={{ margin: "55px" }}>
+    <Segment style={{ margin: '0', borderColor: 'white', boxShadow: 'none' }}>
+      <h1 className='eventFormHeader'>fill out below.</h1>
       <Carousel
         handleCreateDocument={handleCreateDocument}
         eventDetails={eventDetails}

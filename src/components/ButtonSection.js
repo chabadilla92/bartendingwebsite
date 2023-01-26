@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Button, Header, Container } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
-import '../css/buttonsection.css'
+import '../css/buttonsection.css';
 
 const Wrapper = styled.div`
   margin-top: 12.5rem;
@@ -28,11 +28,12 @@ const ButtonSection = ({ header, buttonText, path, handleJumboSelect }) => {
               name={path}
               active={activeItem === { path }}
               onClick={handleJumboImage}
-              style={{ 
+              className='bookButton'
+              style={{
                 marginBottom: '15px',
-                backgroundColor: '#e6e49f',
+                backgroundColor: 'white',
                 color: 'black',
-                fontFamily: 'Secular One, sans-serif'
+                fontFamily: 'Secular One, sans-serif',
               }}
             >
               {buttonText}

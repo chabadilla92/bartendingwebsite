@@ -14,7 +14,7 @@ const jumbotronData = [
   },
   {
     path: '/booking',
-    title: 'services',
+    title: '',
     img: <img src={booking} alt='' />,
   },
   {
@@ -26,10 +26,32 @@ const jumbotronData = [
 
 const Jumbotron = () => {
   return (
-    <div className='parallaxContainer'>
+    <div>
       {jumbotronData.map((data) => {
         if (data.path === window.location.pathname) {
-          return <div className='jumbo-title'>{data.title}</div>;
+          return (
+            <div
+              className={
+                data.path === '/'
+                  ? 'parallaxContainer'
+                  : data.path === '/booking'
+                  ? 'bookingContainer'
+                  : 'parallaxContainer'
+              }
+            >
+              <div
+                className={
+                  data.path === '/'
+                    ? 'jumbo-title'
+                    : data.path === '/booking'
+                    ? 'booking-title'
+                    : 'jumbo-title'
+                }
+              >
+                {data.title}
+              </div>
+            </div>
+          );
         } else {
           return null;
         }

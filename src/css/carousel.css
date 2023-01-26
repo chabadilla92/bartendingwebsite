@@ -1,22 +1,59 @@
 .carousel {
-    overflow: hidden;
+  overflow: hidden;
+  margin: 1rem auto;
 }
 
 .inner {
-    white-space: nowrap;
-    transition: transform 0.3s;
+  white-space: nowrap;
+  transition: transform 0.3s;
 }
 
 .carousel-item {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    height: 100%;
-    width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  font-family: 'Secular One', sans-serif;
 }
 
 .buttons {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+.eventFormHeader {
+  font-family: 'Secular One', sans-serif;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.ui.form .field .ui.input input,
+.ui.form .fields .field .ui.input input {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.ui.form .field > .selection.dropdown {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.ui.form textarea {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.ui.primary.button {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.ui.primary.button:active {
+  background-color: white;
+}
+
+.ui.button {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
 }

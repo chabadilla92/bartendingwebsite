@@ -50,7 +50,7 @@ class App extends Component {
                   onClick={this.handleItemClick}
                   className='item'
                 >
-                  book now.
+                  services.
                 </Menu.Item>
               </Link>
 

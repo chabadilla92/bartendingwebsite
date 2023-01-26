@@ -2,20 +2,20 @@ import React from "react";
 import { Checkbox, Form, TextArea } from "semantic-ui-react";
 
 const vibeOptions = [
-  { key: "1", text: "Casual", value: "Casual" },
-  { key: "2", text: "Formal", value: "Formal" },
-  { key: "3", text: "Upbeat", value: "Upbeat" },
-  { key: "4", text: "Club Scene", value: "Club Scene" },
+  { key: "1", text: "casual", value: "casual" },
+  { key: "2", text: "formal", value: "formal" },
+  { key: "3", text: "upbeat", value: "upbeat" },
+  { key: "4", text: "club scene", value: "club scene" },
 ];
 
 const yesOrNo = [
-  { key: "1", text: "Yes", value: "Yes" },
-  { key: "2", text: "No", value: "No" },
+  { key: "1", text: "yes", value: "yes" },
+  { key: "2", text: "no", value: "no" },
 ];
 
 const publicOptions = [
-  { key: "1", text: "Public", value: "Public" },
-  { key: "2", text: "Private", value: "Private" },
+  { key: "1", text: "public", value: "public" },
+  { key: "2", text: "private", value: "private" },
 ];
 
 const VenueDetailsForm = ({ venueDetails, setVenueDetails, alcoholTypes, setAlcoholTypes }) => {
@@ -36,7 +36,7 @@ const VenueDetailsForm = ({ venueDetails, setVenueDetails, alcoholTypes, setAlco
             selection
             options={vibeOptions}
             label={{
-              children: "What's the Vibe?",
+              children: "what is the vibe?",
             }}
           />
           <Form.Dropdown
@@ -46,7 +46,7 @@ const VenueDetailsForm = ({ venueDetails, setVenueDetails, alcoholTypes, setAlco
             selection
             options={publicOptions}
             label={{
-              children: "Public or Private?",
+              children: "public or private event?",
             }}
           />
           <Form.Dropdown
@@ -56,7 +56,7 @@ const VenueDetailsForm = ({ venueDetails, setVenueDetails, alcoholTypes, setAlco
             selection
             options={yesOrNo}
             label={{
-              children: "Is there a bar provided?",
+              children: "is there a bar provided?",
             }}
           />
           <Form.Dropdown
@@ -66,27 +66,29 @@ const VenueDetailsForm = ({ venueDetails, setVenueDetails, alcoholTypes, setAlco
             selection
             options={yesOrNo}
             label={{
-              children: "Tip jars allowed?",
+              children: "are tip jars allowed?",
             }}
           />
         </Form.Group>
 
+{/* TODO: This needs to be a checkbox option, 'do you need any of the following? check all that apply.' glass cups, disposable cups, ice, napkins, straws */}
         <Form.Field
           control={TextArea}
           name="miscellaneousItems"
           value={venueDetails.miscellaneousItems}
           onChange={handleInputChange}
-          label="Should we bring miscellaneous items?"
-          placeholder="Disposable cups, napkins, coasters, etc..."
+          label="do you need any of the following?"
+          placeholder="disposable cups, napkins, ice, etc..."
         />
 
+{/* TODO: 1. question needs to be changed to 'which of the following beverages do you need?' 2. beer and wine need to be on separate checkboxes, liquor and mixed drinks should be in separate checkboxes, mixed drinks needs to be changed to 'mixed/well drinks', change non-alcoholic to virgin cocktails. 3. add the following checkboxes: juices, soda, club soda */}
         <Form.Group grouped>
           <label>
-            What kind of Alcohol would you like us to provide? Check all that
+            what kind of alcohol would you like us to provide? check all that
             apply.
           </label>
           <Form.Field
-            label="Beer/Wine"
+            label="beer/wine"
             name="beerWine"
             control={Checkbox}
             checked={alcoholTypes.beerWine}
@@ -94,7 +96,7 @@ const VenueDetailsForm = ({ venueDetails, setVenueDetails, alcoholTypes, setAlco
             type="checkbox"
           />
           <Form.Field
-            label="Liquor/ Mixed Drinks"
+            label="liquor/ mixed drinks"
             name="liquorMixedDrink"
             control={Checkbox}
             checked={alcoholTypes.liquorMixedDrink}
@@ -102,7 +104,7 @@ const VenueDetailsForm = ({ venueDetails, setVenueDetails, alcoholTypes, setAlco
             type="checkbox"
           />
           <Form.Field
-            label="Specialty Cocktails"
+            label="specialty cocktails"
             name="specialCocktail"
             control={Checkbox}
             checked={alcoholTypes.specialCocktail}
@@ -110,7 +112,7 @@ const VenueDetailsForm = ({ venueDetails, setVenueDetails, alcoholTypes, setAlco
             type="checkbox"
           />
           <Form.Field
-            label="Non-Alcoholic"
+            label="non-alcoholic"
             name="nonAlcoholic"
             control={Checkbox}
             checked={alcoholTypes.nonAlcoholic}
