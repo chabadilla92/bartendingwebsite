@@ -19,8 +19,8 @@ const jumbotronData = [
   },
   {
     path: '/questions',
-    title: 'faq',
-    img: <img src={faq} alt='' />,
+    title: '',
+    img: <img src={null} alt='' />,
   },
 ];
 
@@ -36,6 +36,8 @@ const Jumbotron = () => {
                   ? 'parallaxContainer'
                   : data.path === '/booking'
                   ? 'bookingContainer'
+                  : data.path === '/questions'
+                  ? 'questionsContainer'
                   : 'parallaxContainer'
               }
             >

@@ -41,7 +41,7 @@ const BookNow = ({ handleCreateDocument }) => {
   return (
     <div className='bookNowContainer'>
       <div className='paragraphContainer'>
-        <p className='paragraph'>interested in our catering services?</p>
+        <p className='paragraph'>interested in our beverage catering services?</p>
         <PageHeader header={firstHeaderProps} />
         {/* <InstructionList instructions={instructionListProps} /> */}
         <p className='paragraphTwo'>give us the details of your event</p>
