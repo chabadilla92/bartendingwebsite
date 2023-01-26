@@ -13,6 +13,8 @@ const Wrapper = styled.div`
 const Img = styled.div`
   object-fit: contain;
   border: 1px solid black;
+  width: 30vw;
+  margin: 2rem auto;
 `;
 
 const Title = styled.h1`
