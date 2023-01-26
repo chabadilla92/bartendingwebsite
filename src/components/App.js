@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, Header, Icon } from 'semantic-ui-react';
+import { Menu } from 'semantic-ui-react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import '../css/navBar.css';

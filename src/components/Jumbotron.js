@@ -1,7 +1,5 @@
 import '../css/jumbotron.css';
 import booking from '../images/booking.avif';
-import faq from '../images/faq.avif';
-import home from '../images/home.avif';
 import chilldbottles from '../images/chilldbottles.jpg';
 import logocopy from '../images/logocopy.svg';
 
