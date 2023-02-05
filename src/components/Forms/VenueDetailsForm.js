@@ -1,5 +1,5 @@
 import React from "react";
-import { Checkbox, Form, TextArea } from "semantic-ui-react";
+import { Checkbox, Divider, Form, TextArea } from "semantic-ui-react";
 
 const vibeOptions = [
   { key: "1", text: "casual", value: "casual" },
@@ -18,8 +18,14 @@ const publicOptions = [
   { key: "2", text: "private", value: "private" },
 ];
 
-const VenueDetailsForm = ({ venueDetails, setVenueDetails, alcoholTypes, setAlcoholTypes }) => {
-
+const VenueDetailsForm = ({
+  venueDetails,
+  setVenueDetails,
+  alcoholTypes,
+  setAlcoholTypes,
+  extraItems,
+  setExtraItems,
+}) => {
   const handleInputChange = (event, result) => {
     const { name, value } = result || event.target;
     setVenueDetails({ ...venueDetails, [name]: value });
@@ -71,54 +77,194 @@ const VenueDetailsForm = ({ venueDetails, setVenueDetails, alcoholTypes, setAlco
           />
         </Form.Group>
 
-{/* TODO: This needs to be a checkbox option, 'do you need any of the following? check all that apply.' glass cups, disposable cups, ice, napkins, straws */}
-        <Form.Field
-          control={TextArea}
-          name="miscellaneousItems"
-          value={venueDetails.miscellaneousItems}
-          onChange={handleInputChange}
-          label="do you need any of the following?"
-          placeholder="disposable cups, napkins, ice, etc..."
-        />
+        {/* CHECKBOX 1 STARTS HERE */}
+        <Form.Group inline>
+          <Form.Group
+            inline
+            style={{ marginRight: "auto", marginBottom: "auto" }}
+          >
+            <Form.Group grouped>
+              <label>
+                do you need any of the following? Check all that apply
+              </label>
+              <Form.Field
+                label="napkins"
+                name="napkins"
+                control={Checkbox}
+                checked={extraItems.napkins}
+                onChange={(e) =>
+                  setExtraItems({ ...extraItems, napkins: !extraItems.napkins })
+                }
+                type="checkbox"
+              />
+              <Form.Field
+                label="straws"
+                name="straws"
+                control={Checkbox}
+                checked={extraItems.straws}
+                onChange={(e) =>
+                  setExtraItems({ ...extraItems, straws: !extraItems.straws })
+                }
+                type="checkbox"
+              />
+              <Form.Field
+                label="ice"
+                name="ice"
+                control={Checkbox}
+                checked={extraItems.ice}
+                onChange={(e) =>
+                  setExtraItems({ ...extraItems, ice: !extraItems.ice })
+                }
+                type="checkbox"
+              />
+              <Form.Field
+                label="disposable cups"
+                name="disposableCups"
+                control={Checkbox}
+                checked={extraItems.disposableCups}
+                onChange={(e) =>
+                  setExtraItems({
+                    ...extraItems,
+                    disposableCups: !extraItems.disposableCups,
+                  })
+                }
+                type="checkbox"
+              />
+              <Form.Field
+                label="glass cups"
+                name="glassCups"
+                control={Checkbox}
+                checked={extraItems.glassCups}
+                onChange={(e) =>
+                  setExtraItems({
+                    ...extraItems,
+                    glassCups: !extraItems.glassCups,
+                  })
+                }
+                type="checkbox"
+              />
+            </Form.Group>
+          </Form.Group>
 
-{/* TODO: 1. question needs to be changed to 'which of the following beverages do you need?' 2. beer and wine need to be on separate checkboxes, liquor and mixed drinks should be in separate checkboxes, mixed drinks needs to be changed to 'mixed/well drinks', change non-alcoholic to virgin cocktails. 3. add the following checkboxes: juices, soda, club soda */}
-        <Form.Group grouped>
-          <label>
-            what kind of alcohol would you like us to provide? check all that
-            apply.
-          </label>
-          <Form.Field
-            label="beer/wine"
-            name="beerWine"
-            control={Checkbox}
-            checked={alcoholTypes.beerWine}
-            onChange={e => setAlcoholTypes({...alcoholTypes, beerWine: !alcoholTypes.beerWine})}
-            type="checkbox"
-          />
-          <Form.Field
-            label="liquor/ mixed drinks"
-            name="liquorMixedDrink"
-            control={Checkbox}
-            checked={alcoholTypes.liquorMixedDrink}
-            onChange={e => setAlcoholTypes({...alcoholTypes, liquorMixedDrink: !alcoholTypes.liquorMixedDrink})}
-            type="checkbox"
-          />
-          <Form.Field
-            label="specialty cocktails"
-            name="specialCocktail"
-            control={Checkbox}
-            checked={alcoholTypes.specialCocktail}
-            onChange={e => setAlcoholTypes({...alcoholTypes, specialCocktail: !alcoholTypes.specialCocktail})}
-            type="checkbox"
-          />
-          <Form.Field
-            label="non-alcoholic"
-            name="nonAlcoholic"
-            control={Checkbox}
-            checked={alcoholTypes.nonAlcoholic}
-            onChange={e => setAlcoholTypes({...alcoholTypes, nonAlcoholic: !alcoholTypes.nonAlcoholic})}
-            type="checkbox"
-          />
+          {/* CHECKBOX 2 STARTS HERE */}
+          <Form.Group inline>
+            <Form.Group grouped>
+              <label>which of the following beverages do you need?</label>
+              <Form.Field
+                label="beer"
+                name="beer"
+                control={Checkbox}
+                checked={alcoholTypes.beer}
+                onChange={(e) =>
+                  setAlcoholTypes({ ...alcoholTypes, beer: !alcoholTypes.beer })
+                }
+                type="checkbox"
+              />
+              <Form.Field
+                label="wine"
+                name="wine"
+                control={Checkbox}
+                checked={alcoholTypes.wine}
+                onChange={(e) =>
+                  setAlcoholTypes({ ...alcoholTypes, wine: !alcoholTypes.wine })
+                }
+                type="checkbox"
+              />
+              <Form.Field
+                label="liquor"
+                name="liquor"
+                control={Checkbox}
+                checked={alcoholTypes.liquor}
+                onChange={(e) =>
+                  setAlcoholTypes({
+                    ...alcoholTypes,
+                    liquor: !alcoholTypes.liquor,
+                  })
+                }
+                type="checkbox"
+              />
+              <Form.Field
+                label="mixed/ well drinks"
+                name="mixedWellDrink"
+                control={Checkbox}
+                checked={alcoholTypes.mixedWellDrink}
+                onChange={(e) =>
+                  setAlcoholTypes({
+                    ...alcoholTypes,
+                    mixedWellDrink: !alcoholTypes.mixedWellDrink,
+                  })
+                }
+                type="checkbox"
+              />
+              <Form.Field
+                label="specialty cocktails"
+                name="specialCocktail"
+                control={Checkbox}
+                checked={alcoholTypes.specialCocktail}
+                onChange={(e) =>
+                  setAlcoholTypes({
+                    ...alcoholTypes,
+                    specialCocktail: !alcoholTypes.specialCocktail,
+                  })
+                }
+                type="checkbox"
+              />
+            </Form.Group>
+            <Form.Group grouped>
+              <Form.Field
+                label="virgin cocktails"
+                name="virginCocktails"
+                control={Checkbox}
+                checked={alcoholTypes.virginCocktails}
+                onChange={(e) =>
+                  setAlcoholTypes({
+                    ...alcoholTypes,
+                    virginCocktails: !alcoholTypes.virginCocktails,
+                  })
+                }
+                type="checkbox"
+              />
+              <Form.Field
+                label="juices"
+                name="juices"
+                control={Checkbox}
+                checked={alcoholTypes.juices}
+                onChange={(e) =>
+                  setAlcoholTypes({
+                    ...alcoholTypes,
+                    juices: !alcoholTypes.juices,
+                  })
+                }
+                type="checkbox"
+              />
+              <Form.Field
+                label="soda"
+                name="soda"
+                control={Checkbox}
+                checked={alcoholTypes.soda}
+                onChange={(e) =>
+                  setAlcoholTypes({
+                    ...alcoholTypes,
+                    soda: !alcoholTypes.soda,
+                  })
+                }
+                type="checkbox"
+              />
+              <Form.Field
+                label="club soda"
+                name="clubSoda"
+                control={Checkbox}
+                checked={alcoholTypes.clubSoda}
+                onChange={(e) =>
+                  setAlcoholTypes({
+                    ...alcoholTypes,
+                    clubSoda: !alcoholTypes.clubSoda,
+                  })
+                }
+                type="checkbox"
+              />
+            </Form.Group>
+          </Form.Group>
         </Form.Group>
       </Form>
     </div>
