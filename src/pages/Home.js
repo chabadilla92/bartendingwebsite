@@ -24,7 +24,7 @@ const buttonProps = {
 const infoProps = {
   title: "about us",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    "We are a family-owned bartending service based in the San Francisco Bay Area and we would love to host your next party. Whether it's a small get together with family and friends or a large corporate event, we got you covered. We would like to invite you to kick back, sip on one of our delicious drinks, and have a just chill'd moment on us.",
 };
 
 const Home = ({ handleJumboSelect }) => {
